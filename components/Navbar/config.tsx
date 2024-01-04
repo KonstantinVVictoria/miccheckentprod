@@ -12,6 +12,6 @@ const NavLink = (
   };
 };
 
-const nav_links_data = [];
+const nav_links_data = [{}];
 
 export default nav_links_data;
