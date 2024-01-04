@@ -10,7 +10,7 @@ function InfoBanner() {
 export function SplashPage() {
   return (
     <>
-      <Navbar nav_links={nav_links_data} />
+      <Navbar />
       <VideoBanner
         glow
         style={{

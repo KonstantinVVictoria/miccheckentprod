@@ -15,9 +15,9 @@ const NavItem = ({ label, href, special }: NavLinkProps) => {
 };
 
 export function Navbar(props: NavbarProps) {
-  const nav_links = props.nav_links.map((nav_link_prop) => (
-    <NavItem {...nav_link_prop} />
-  ));
+  // const nav_links = props.nav_links.map((nav_link_prop) => (
+  //   <NavItem {...nav_link_prop} />
+  // ));
   return (
     <header className={styles.main_container}>
       <Logo size={5.5} />

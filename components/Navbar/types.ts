@@ -1,6 +1,6 @@
 export type NavbarProps = {
   children?: React.ReactNode;
-  nav_links: NavLinkProps[];
+  nav_links?: NavLinkProps[];
 };
 
 export type NavLinkProps = {
