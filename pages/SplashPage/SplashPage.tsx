@@ -7,7 +7,7 @@ function InfoBanner() {
   return <></>;
 }
 
-export function SplashPage() {
+export default function SplashPage() {
   return (
     <>
       <Navbar />
@@ -21,13 +21,17 @@ export function SplashPage() {
         src="/videos/splash_page.mp4"
       />
       <section id={"intro_section"} style={{ width: "100vw", padding: "1rem" }}>
-        <h1 style={{ fontWeight: "200", zIndex: 2 }}>We specialize in...</h1>
+        <h1 style={{ fontWeight: "800", zIndex: 99, width: "100vw" }}>
+          We specialize in...
+        </h1>
         <h1 style={{ color: "var(--gold)", fontWeight: "400" }}>
           Magical Slow Dances
           <br />
           <br />
-          Energetic Party
+          Energetic Moments
           <br />
+          <br />
+          Unforgettable Memories
         </h1>
       </section>
     </>
