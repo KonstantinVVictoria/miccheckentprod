@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import { VideoBannerProps } from "./types";
 
 export default function VideoBanner(props: VideoBannerProps) {
-  const video_player_glow_ref = useRef();
+  const video_player_glow_ref = useRef(null);
   useEffect(() => {}, []);
   return (
     <div id={props.id} className={styles.main_container} style={props.style}>

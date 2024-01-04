@@ -23,7 +23,11 @@ export function SplashPage() {
       <section id={"intro_section"} style={{ width: "100vw", padding: "1rem" }}>
         <h1 style={{ fontWeight: "200", zIndex: 2 }}>We specialize in...</h1>
         <h1 style={{ color: "var(--gold)", fontWeight: "400" }}>
-          Unforgettable Nights
+          Magical Slow Dances
+          <br />
+          <br />
+          Energetic Party
+          <br />
         </h1>
       </section>
     </>
