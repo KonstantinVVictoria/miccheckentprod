@@ -1,5 +1,5 @@
 :root {
-  --main-background-color-dark: rgb(36, 36, 36);
+  --main-background-color-dark: rgb(27, 27, 27);
   --main-font-color: rgb(245, 245, 245);
   --rose-gold: #ff8395;
   --gold: #ffe366;
@@ -17,4 +17,17 @@ body {
 }
 * {
   box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }

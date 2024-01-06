@@ -20,12 +20,9 @@ export function Navbar(props: NavbarProps) {
   // ));
   return (
     <header className={styles.main_container}>
-      <Logo size={5.5} />
+      <Logo size={4} style={{ margin: "0.5rem" }} />
       <div className={styles.menu_items}>
         <button className={styles.nav_link_special}>Book Now!</button>
-        <button className={styles.menu_button}>
-          <MenuIcon color={"var(--gold)"} />
-        </button>
       </div>
     </header>
   );

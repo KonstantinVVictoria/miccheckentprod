@@ -14,6 +14,7 @@
   backdrop-filter: blur(10px);
   z-index: 100;
   border-bottom: 1px solid var(--gold);
+  top: 0;
 }
 
 .nav_links {
@@ -38,8 +39,8 @@
   justify-content: center;
   composes: nav_link;
   color: var(--gold);
-  border-radius: 7px;
-  border: 2px solid var(--gold);
+  border-radius: 5px;
+  border: 1px solid var(--gold);
   padding: 0.6rem 0.6rem;
   background-color: transparent;
   font-family: inherit;
@@ -59,7 +60,7 @@
     width: 100%;
     align-items: center;
     gap: 3rem;
-    padding: 1.2rem 0.7rem;
+    padding: 0.4rem 0.4rem;
     justify-content: space-between;
   }
   .menu_items {
@@ -67,9 +68,6 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-  }
-  .menu_button {
-    width: 2.3rem;
   }
 }
 

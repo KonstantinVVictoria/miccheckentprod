@@ -11,6 +11,7 @@ export default function Logo(props: LogoProps) {
       version="1.1"
       id="svg5"
       xmlns="http://www.w3.org/2000/svg"
+      style={props.style}
     >
       <g id="layer1" transform="translate(-34.328843,-181.88111)">
         <path
