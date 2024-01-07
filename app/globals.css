@@ -13,7 +13,7 @@
   --border-color: var(--concrete);
 
   --main-font-color: var(--main-font-color-black);
-  --main-background-color: var(var(--main-background-color-white));
+  --main-background-color: var(--main-background-color-white);
 }
 
 html {

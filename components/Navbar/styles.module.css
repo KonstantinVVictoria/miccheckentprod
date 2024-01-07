@@ -5,13 +5,7 @@
   display: flex;
   composes: _config;
   position: sticky;
-  background: rgb(35, 35, 35);
-  background: linear-gradient(
-    0deg,
-    var(--main-background-color) 0%,
-    color-mix(in srgb, var(--main-background-color) 70%, rgb(0, 0, 0) 30%) 100%
-  );
-  backdrop-filter: blur(10px);
+  background: var(--main-background-color);
   z-index: 100;
   border-bottom: 1px solid var(--border-color);
   top: 0;

@@ -13,17 +13,45 @@ export default function SplashPage() {
   return (
     <>
       <Navbar />
-      <VideoBanner
-        glow
-        style={{
-          height: "40vh",
-          width: "100vw",
-        }}
-        id={"intro_video"}
-        src="/videos/kev_splash_page.mp4"
-        placeholder_src="images/company_logo.svg"
-        placeholder_alt="dj kev"
-      />
+      <main style={{ marginBottom: "4.5rem" }}>
+        <VideoBanner
+          glow
+          style={{
+            height: "65vh",
+            width: "100vw",
+            borderRadius: "17px",
+          }}
+          id={"intro_video"}
+          src="/videos/kev_splash_page.mp4"
+          placeholder_src="images/company_logo.svg"
+          placeholder_alt="dj kev"
+        />
+        <section
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "1rem 0rem",
+            backgroundColor: "var(--ruby)",
+            padding: "1rem",
+            boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
+            color: "white",
+          }}
+        >
+          <p
+            style={{
+              fontWeight: "200",
+              fontSize: "1.7rem",
+              textAlign: "center",
+              margin: "0.5rem 0rem",
+            }}
+          >
+            It’s not just <b>entertainment</b> <br />
+            It’s about the <b>experience</b>
+          </p>
+        </section>
+      </main>
       <footer
         style={{
           zIndex: 100,
@@ -35,18 +63,16 @@ export default function SplashPage() {
           padding: "0.7rem 0.5rem",
           gap: "1rem",
           width: "100%",
-          background: `linear-gradient(
-    180deg,
-    var(--main-background-color) 0%,
-    color-mix(in srgb, var(--main-background-color) 70%, rgb(0,0,0) 30%) 100%)`,
+          backgroundColor: "var(--marble)",
+          borderTop: "1px solid var(--concrete)",
         }}
       >
         <input
           placeholder="Search"
           style={{
             height: " 2.5rem",
-            border: "1px solid var(--obsidian)",
-            borderRadius: "50px",
+            border: "1px solid var(--concrete)",
+            borderRadius: "7px",
             width: "80%",
             background: "transparent",
             fontFamily: "inherit",
