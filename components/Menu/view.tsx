@@ -78,7 +78,7 @@ export default function Menu() {
         <footer
           style={{
             zIndex: 103,
-            position: "absolute",
+            position: "fixed",
             bottom: "0",
             display: "flex",
             justifyContent: "flex-end",
