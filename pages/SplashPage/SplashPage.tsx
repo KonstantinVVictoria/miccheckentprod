@@ -47,9 +47,9 @@ export default function SplashPage() {
               margin: "0.5rem 0rem",
             }}
           >
-            <i>"</i> It’s not just <b>entertainment.</b> <br />
+            <i>&ldquo</i> It’s not just <b>entertainment.</b> <br />
             It’s about the <b>experience.</b>
-            <i>"</i>
+            <i>&rdquo</i>
           </p>
         </section>
         <section
