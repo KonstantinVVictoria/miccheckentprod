@@ -9,7 +9,7 @@ export default function Menu() {
     const body = document.getElementsByTagName(
       "body"
     )[0] as unknown as HTMLBodyElement;
-    body.style.overflowY = is_menu_open ? "auto" : "auto";
+    body.style.overflowY = is_menu_open ? "hidden" : "auto";
   });
   return (
     <div
@@ -72,7 +72,7 @@ export default function Menu() {
         style={{
           opacity: is_menu_open ? "1" : "0",
           pointerEvents: is_menu_open ? "auto" : "none",
-          backdropFilter: is_menu_open ? "blur(25px)" : "blur(0px)",
+          backdropFilter: is_menu_open ? "blur(60px)" : "blur(0px)",
         }}
       ></div>
       <footer
@@ -87,7 +87,7 @@ export default function Menu() {
           gap: "1rem",
           width: "100%",
           height: "4rem",
-          backgroundColor: "blue",
+          backgroundColor: "transparent",
           opacity: is_menu_open ? "1" : "0",
           transition: "opacity 200ms ease",
           pointerEvents: is_menu_open ? "auto" : "none",
@@ -96,7 +96,7 @@ export default function Menu() {
         <button
           style={{
             border: "none",
-            backgroundColor: "red",
+            backgroundColor: "transparent",
           }}
           onMouseDown={() => {
             menu_open(false);
