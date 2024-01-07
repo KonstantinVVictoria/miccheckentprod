@@ -47,9 +47,10 @@ export default function SplashPage() {
               margin: "0.5rem 0rem",
             }}
           >
-            <i>&ldquo</i> It’s not just <b>entertainment.</b> <br />
-            It’s about the <b>experience.</b>
-            <i>&rdquo</i>
+            <q>
+              It’s not just <b>entertainment.</b> <br />
+              It’s about the <b>experience.</b>
+            </q>
           </p>
         </section>
         <section
@@ -65,7 +66,7 @@ export default function SplashPage() {
           }}
         >
           <img
-            src="/images/whatwedo.png"
+            src="/images/dj_kev_fixing_lights.jpg"
             style={{ width: "100%", objectFit: "cover", borderRadius: "15px" }}
           />
           <h2
@@ -102,7 +103,7 @@ export default function SplashPage() {
           }}
         >
           <img
-            src="/images/dj_kev_luu_side.jpg"
+            src="/images/dj_kev_closeup_side.jpg"
             style={{ width: "100%", objectFit: "cover", borderRadius: "15px" }}
           />
           <h2
