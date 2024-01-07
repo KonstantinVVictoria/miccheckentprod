@@ -2,8 +2,9 @@ import nav_links_data from "@/components/Navbar/config";
 import { Navbar } from "@/components/Navbar/view";
 import VideoBanner from "@/components/VideoBanner/view";
 import styles from "./styles.module.css";
-import { MenuIcon } from "@/components/Icons/view";
+import { ExitIcon, MenuIcon } from "@/components/Icons/view";
 import { relative } from "path";
+import Menu from "@/components/Menu/view";
 
 function InfoBanner() {
   return <></>;
@@ -12,6 +13,7 @@ function InfoBanner() {
 export default function SplashPage() {
   return (
     <>
+      <Menu />
       <Navbar />
       <main style={{ marginBottom: "4.5rem" }}>
         <VideoBanner
@@ -83,7 +85,7 @@ export default function SplashPage() {
               fontWeight: "200",
               fontSize: "1.7rem",
               textAlign: "center",
-              margin: "0.5rem 0rem",
+              margin: "0rem 0rem",
             }}
           >
             We offer a full Wedding and Event entertainment service including
@@ -120,7 +122,7 @@ export default function SplashPage() {
               fontWeight: "200",
               fontSize: "1.7rem",
               textAlign: "center",
-              margin: "0.5rem 0rem",
+              margin: "0rem 0rem",
             }}
           >
             An entertainment company run by professional musicians and audio
@@ -129,45 +131,6 @@ export default function SplashPage() {
           </p>
         </section>
       </main>
-      <footer
-        style={{
-          zIndex: 100,
-          position: "fixed",
-          bottom: "0",
-          display: "flex",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-          padding: "0.7rem 0.5rem",
-          gap: "1rem",
-          width: "100%",
-          backgroundColor: "var(--marble)",
-          borderTop: "1px solid var(--concrete)",
-        }}
-      >
-        <input
-          placeholder="Ask an AI"
-          style={{
-            height: " 2.5rem",
-            border: "none",
-            borderRadius: "7px",
-            width: "80%",
-            background: "transparent",
-            fontFamily: "inherit",
-            padding: "0rem 1rem",
-            fontSize: "1rem",
-            color: "var(--obsidian)",
-          }}
-        />
-        <MenuIcon
-          style={{
-            height: "2rem",
-            width: "auto",
-            zIndex: 100,
-            position: "relative",
-          }}
-          color={"var(--obsidian)"}
-        />
-      </footer>
     </>
   );
 }
