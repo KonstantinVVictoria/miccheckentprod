@@ -32,9 +32,9 @@ export default function VideoBanner(props: VideoBannerProps) {
           ref={video_player_glow}
           style={{
             position: "absolute",
-            filter: "blur(60px)",
+            filter: "blur(40px) saturate(150%)",
             objectFit: "cover",
-            opacity: 1,
+            opacity: 0.8,
           }}
         />
       ) : null}
@@ -62,12 +62,14 @@ export default function VideoBanner(props: VideoBannerProps) {
           objectFit: "cover",
         }}
       />
-      <img
-        className={styles.placeholder}
-        src={props.placeholder_src}
-        ref={placeholder}
-      />
-      <div className={styles.overlay} />
+
+      <div className={styles.overlay}>
+        <img
+          className={styles.placeholder}
+          src={props.placeholder_src}
+          ref={placeholder}
+        />
+      </div>
     </div>
   );
 }

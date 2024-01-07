@@ -21,7 +21,7 @@ export default function SplashPage() {
         }}
         id={"intro_video"}
         src="/videos/kev_splash_page.mp4"
-        placeholder_src="images/dj_kev_luu_side.jpg"
+        placeholder_src="images/company_logo.svg"
         placeholder_alt="dj kev"
       />
       <footer
