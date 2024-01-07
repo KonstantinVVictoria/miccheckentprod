@@ -36,17 +36,6 @@ export default function VideoBanner(props: VideoBannerProps) {
             objectFit: "cover",
             opacity: 1,
           }}
-          onCanPlay={() => {
-            const VideoPlayerGlow =
-              video_player_glow.current as unknown as HTMLVideoElement;
-            const VideoPlayer =
-              video_player.current as unknown as HTMLVideoElement;
-            const Placeholder =
-              placeholder.current as unknown as HTMLImageElement;
-            VideoPlayer.play();
-            VideoPlayerGlow.play();
-            Placeholder.style.transform = "translateX(100%)";
-          }}
         />
       ) : null}
       <video
@@ -57,6 +46,17 @@ export default function VideoBanner(props: VideoBannerProps) {
         height="100%"
         width="100%"
         ref={video_player}
+        onCanPlay={() => {
+          const VideoPlayerGlow =
+            video_player_glow.current as unknown as HTMLVideoElement;
+          const VideoPlayer =
+            video_player.current as unknown as HTMLVideoElement;
+          const Placeholder =
+            placeholder.current as unknown as HTMLImageElement;
+          VideoPlayer.play();
+          VideoPlayerGlow.play();
+          Placeholder.style.transform = "translateX(100%)";
+        }}
         style={{
           position: "absolute",
           objectFit: "cover",
