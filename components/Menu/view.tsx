@@ -74,40 +74,45 @@ export default function Menu() {
           pointerEvents: is_menu_open ? "auto" : "none",
           backdropFilter: is_menu_open ? "blur(25px)" : "blur(0px)",
         }}
+      ></div>
+      <footer
+        style={{
+          zIndex: 103,
+          position: "fixed",
+          bottom: "0",
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          padding: "0.7rem 0.5rem",
+          gap: "1rem",
+          width: "100%",
+          height: "4rem",
+          backgroundColor: "blue",
+          opacity: is_menu_open ? "1" : "0",
+          transition: "opacity 200ms ease",
+          pointerEvents: is_menu_open ? "auto" : "none",
+        }}
       >
-        <footer
+        <button
           style={{
-            zIndex: 103,
-            position: "fixed",
-            bottom: "0",
-            display: "flex",
-            justifyContent: "flex-end",
-            alignItems: "center",
-            padding: "0.7rem 0.5rem",
-            gap: "1rem",
-            width: "100%",
-            height: "4rem",
-            backgroundColor: "blue",
+            border: "none",
+            backgroundColor: "red",
+          }}
+          onMouseDown={() => {
+            menu_open(false);
           }}
         >
-          <button
-            style={{ border: "none", backgroundColor: "red" }}
-            onMouseDown={() => {
-              menu_open(false);
+          <ExitIcon
+            style={{
+              height: "2.4rem",
+              width: "auto",
+              zIndex: 104,
+              position: "relative",
             }}
-          >
-            <ExitIcon
-              style={{
-                height: "2.4rem",
-                width: "auto",
-                zIndex: 104,
-                position: "relative",
-              }}
-              color={"var(--marble)"}
-            />
-          </button>
-        </footer>
-      </div>
+            color={"var(--marble)"}
+          />
+        </button>
+      </footer>
     </div>
   );
 }
