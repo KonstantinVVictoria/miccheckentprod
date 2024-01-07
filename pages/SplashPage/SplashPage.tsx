@@ -32,11 +32,12 @@ export default function SplashPage() {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            margin: "1rem 0rem",
+            margin: "0rem 0rem",
             backgroundColor: "var(--ruby)",
             padding: "1rem",
             boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
             color: "white",
+            height: "calc(20vh - 1.2rem)",
           }}
         >
           <p
