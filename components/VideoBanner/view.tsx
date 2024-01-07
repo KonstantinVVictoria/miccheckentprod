@@ -6,14 +6,17 @@ import { VideoBannerProps } from "./types";
 export default function VideoBanner(props: VideoBannerProps) {
   const video_player_glow = useRef(null);
   const video_player = useRef(null);
+  const placeholder = useRef(null);
   useEffect(() => {
     const VideoPlayer = video_player.current as unknown as HTMLVideoElement;
     const VideoPlayerGlow =
       video_player_glow.current as unknown as HTMLVideoElement;
     console.log(VideoPlayer.readyState);
+    const Placeholder = placeholder.current as unknown as HTMLImageElement;
     if (VideoPlayer.readyState > 2) {
       VideoPlayer.play();
       VideoPlayerGlow.play();
+      Placeholder.style.transform = "translateX(100%)";
     }
   }, []);
   return (
@@ -38,8 +41,11 @@ export default function VideoBanner(props: VideoBannerProps) {
               video_player_glow.current as unknown as HTMLVideoElement;
             const VideoPlayer =
               video_player.current as unknown as HTMLVideoElement;
+            const Placeholder =
+              placeholder.current as unknown as HTMLImageElement;
             VideoPlayer.play();
             VideoPlayerGlow.play();
+            Placeholder.style.transform = "translateX(100%)";
           }}
         />
       ) : null}
@@ -55,6 +61,11 @@ export default function VideoBanner(props: VideoBannerProps) {
           position: "absolute",
           objectFit: "cover",
         }}
+      />
+      <img
+        className={styles.placeholder}
+        src={props.placeholder_src}
+        ref={placeholder}
       />
       <div className={styles.overlay} />
     </div>

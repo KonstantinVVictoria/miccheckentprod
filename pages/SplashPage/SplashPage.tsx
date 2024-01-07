@@ -21,6 +21,8 @@ export default function SplashPage() {
         }}
         id={"intro_video"}
         src="/videos/kev_splash_page.mp4"
+        placeholder_src="images/dj_kev_luu_side.jpg"
+        placeholder_alt="dj kev"
       />
       <footer
         style={{
@@ -42,7 +44,7 @@ export default function SplashPage() {
         <input
           placeholder="Search"
           style={{
-            height: " 2rem",
+            height: " 2.5rem",
             border: "1px solid var(--obsidian)",
             borderRadius: "50px",
             width: "80%",
