@@ -15,7 +15,6 @@ export default function SplashPage() {
       <Navbar />
       <main style={{ marginBottom: "4.5rem" }}>
         <VideoBanner
-          glow
           style={{
             height: "65vh",
             width: "100vw",
@@ -27,17 +26,17 @@ export default function SplashPage() {
           placeholder_alt="dj kev"
         />
         <section
+          className={styles.section}
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
             margin: "0rem 0rem",
-            backgroundColor: "var(--ruby)",
             padding: "1rem",
             boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
             color: "white",
-            height: "calc(20vh - 1.2rem)",
+            height: "calc(100vh - 65vh - 8rem)",
           }}
         >
           <p

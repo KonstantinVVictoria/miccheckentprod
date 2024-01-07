@@ -13,7 +13,7 @@ export default function VideoBanner(props: VideoBannerProps) {
       video_player_glow.current as unknown as HTMLVideoElement;
     console.log(VideoPlayer.readyState);
     const Placeholder = placeholder.current as unknown as HTMLImageElement;
-    if (VideoPlayer.readyState > 2) {
+    if (VideoPlayer.readyState > 2 && props.glow) {
       VideoPlayer.play();
       VideoPlayerGlow.play();
       Placeholder.style.transform = "translateX(100%)";
@@ -47,15 +47,17 @@ export default function VideoBanner(props: VideoBannerProps) {
         width="100%"
         ref={video_player}
         onCanPlay={() => {
-          const VideoPlayerGlow =
-            video_player_glow.current as unknown as HTMLVideoElement;
-          const VideoPlayer =
-            video_player.current as unknown as HTMLVideoElement;
-          const Placeholder =
-            placeholder.current as unknown as HTMLImageElement;
-          VideoPlayer.play();
-          VideoPlayerGlow.play();
-          Placeholder.style.transform = "translateX(100%)";
+          if (props.glow) {
+            const VideoPlayerGlow =
+              video_player_glow.current as unknown as HTMLVideoElement;
+            const VideoPlayer =
+              video_player.current as unknown as HTMLVideoElement;
+            const Placeholder =
+              placeholder.current as unknown as HTMLImageElement;
+            VideoPlayer.play();
+            VideoPlayerGlow.play();
+            Placeholder.style.transform = "translateX(100%)";
+          }
         }}
         style={{
           position: "absolute",

@@ -9,6 +9,7 @@
   z-index: 100;
   border-bottom: 1px solid var(--border-color);
   top: 0;
+  height: 4.5rem;
 }
 
 .nav_links {
