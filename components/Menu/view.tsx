@@ -85,7 +85,6 @@ export default function Menu() {
             padding: "0.7rem 0.5rem",
             gap: "1rem",
             width: "100%",
-            height: "4rem",
             backgroundColor: "blue",
           }}
         >
@@ -99,6 +98,8 @@ export default function Menu() {
               style={{
                 height: "2.4rem",
                 width: "auto",
+                zIndex: 104,
+                position: "relative",
               }}
               color={"var(--marble)"}
             />
