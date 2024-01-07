@@ -1,6 +1,6 @@
 .menu {
   display: flex;
-  position: absolute;
+  position: fixed;
   z-index: 103;
   height: 100%;
   width: 100%;
