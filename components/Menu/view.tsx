@@ -12,15 +12,7 @@ export default function Menu() {
     body.style.overflowY = is_menu_open ? "hidden" : "auto";
   });
   return (
-    <div
-      style={{
-        position: "fixed",
-        zIndex: "102",
-        height: "100vh",
-        width: "100vw",
-        top: "0",
-      }}
-    >
+    <>
       <footer
         style={{
           zIndex: 100,
@@ -113,6 +105,6 @@ export default function Menu() {
           />
         </button>
       </footer>
-    </div>
+    </>
   );
 }

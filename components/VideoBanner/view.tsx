@@ -22,7 +22,16 @@ export default function VideoBanner(props: VideoBannerProps) {
     }
   }, []);
   return (
-    <div id={props.id} className={styles.main_container} style={props.style}>
+    <div
+      id={props.id}
+      className={styles.main_container}
+      style={props.style}
+      onMouseDown={(event) => {
+        const VideoPlayer = video_player.current as unknown as HTMLVideoElement;
+        console.log(VideoPlayer.muted);
+        VideoPlayer.muted = !VideoPlayer.muted;
+      }}
+    >
       {props.glow ? (
         <video
           loop
