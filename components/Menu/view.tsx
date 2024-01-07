@@ -12,7 +12,14 @@ export default function Menu() {
     body.style.overflowY = is_menu_open ? "hidden" : "auto";
   });
   return (
-    <>
+    <div
+      style={{
+        position: "fixed",
+        zIndex: "102",
+        height: "100vh",
+        width: "100vw",
+      }}
+    >
       <footer
         style={{
           zIndex: 100,
@@ -70,8 +77,8 @@ export default function Menu() {
         <nav className={styles.menu_selections}></nav>
         <footer
           style={{
-            zIndex: 102,
-            position: "fixed",
+            zIndex: 103,
+            position: "absolute",
             bottom: "0",
             display: "flex",
             justifyContent: "flex-end",
@@ -98,6 +105,6 @@ export default function Menu() {
           </button>
         </footer>
       </div>
-    </>
+    </div>
   );
 }
