@@ -5,7 +5,12 @@ import { MenuProps } from "./types";
 import { useEffect, useState } from "react";
 export default function Menu() {
   const [is_menu_open, menu_open] = useState(false);
-  useEffect(() => {});
+  useEffect(() => {
+    const body = document.getElementsByTagName(
+      "body"
+    )[0] as unknown as HTMLBodyElement;
+    body.style.overflowY = is_menu_open ? "hidden" : "auto";
+  });
   return (
     <>
       <footer
@@ -67,7 +72,7 @@ export default function Menu() {
         <footer
           style={{
             zIndex: 100,
-            position: "relative",
+            position: "fixed",
             bottom: "0",
             display: "flex",
             justifyContent: "flex-end",
