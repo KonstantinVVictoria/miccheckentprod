@@ -9,7 +9,7 @@ export default function Menu() {
     const body = document.getElementsByTagName(
       "body"
     )[0] as unknown as HTMLBodyElement;
-    body.style.overflowY = is_menu_open ? "hidden" : "auto";
+    body.style.overflowY = is_menu_open ? "auto" : "auto";
   });
   return (
     <div

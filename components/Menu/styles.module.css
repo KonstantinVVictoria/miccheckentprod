@@ -10,6 +10,7 @@
   flex-direction: column;
   opacity: 0;
   transition: opacity 400ms ease;
+  top: 0;
 }
 
 .menu_selections {
