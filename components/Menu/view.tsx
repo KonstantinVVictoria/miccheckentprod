@@ -71,7 +71,7 @@ export default function Menu() {
         <nav className={styles.menu_selections}></nav>
         <footer
           style={{
-            zIndex: 100,
+            zIndex: 102,
             position: "fixed",
             bottom: "0",
             display: "flex",
