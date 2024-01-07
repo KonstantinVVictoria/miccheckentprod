@@ -87,10 +87,11 @@ export default function Menu() {
             gap: "1rem",
             width: "100%",
             height: "4rem",
+            backgroundColor: "blue",
           }}
         >
           <button
-            style={{ border: "none", backgroundColor: "transparent" }}
+            style={{ border: "none", backgroundColor: "red" }}
             onMouseDown={() => {
               menu_open(false);
             }}
