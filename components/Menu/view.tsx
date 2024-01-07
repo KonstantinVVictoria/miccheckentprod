@@ -62,7 +62,6 @@ export default function Menu() {
       <div
         className={styles.menu}
         style={{
-          position: "fixed",
           opacity: is_menu_open ? "1" : "0",
           pointerEvents: is_menu_open ? "auto" : "none",
           backdropFilter: is_menu_open ? "blur(25px)" : "blur(0px)",
@@ -72,7 +71,7 @@ export default function Menu() {
         <footer
           style={{
             zIndex: 102,
-            position: "fixed",
+            position: "absolute",
             bottom: "0",
             display: "flex",
             justifyContent: "flex-end",
@@ -93,8 +92,6 @@ export default function Menu() {
               style={{
                 height: "2.4rem",
                 width: "auto",
-                zIndex: 100,
-                position: "relative",
               }}
               color={"var(--marble)"}
             />
