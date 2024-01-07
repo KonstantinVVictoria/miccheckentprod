@@ -13,7 +13,6 @@ function InfoBanner() {
 export default function SplashPage() {
   return (
     <>
-      <Menu />
       <Navbar />
       <main style={{ marginBottom: "4.5rem" }}>
         <VideoBanner
@@ -131,6 +130,7 @@ export default function SplashPage() {
           </p>
         </section>
       </main>
+      <Menu />
     </>
   );
 }

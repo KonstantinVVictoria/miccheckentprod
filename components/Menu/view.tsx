@@ -18,6 +18,7 @@ export default function Menu() {
         zIndex: "102",
         height: "100vh",
         width: "100vw",
+        top: "0",
       }}
     >
       <footer
@@ -85,6 +86,7 @@ export default function Menu() {
             padding: "0.7rem 0.5rem",
             gap: "1rem",
             width: "100%",
+            height: "4rem",
             backgroundColor: "blue",
           }}
         >
