@@ -14,8 +14,8 @@ export default function VideoBanner(props: VideoBannerProps) {
     console.log(VideoPlayer.readyState);
     const Placeholder = placeholder.current as unknown as HTMLImageElement;
     if (VideoPlayer.readyState > 2) {
+      VideoPlayer.play();
       if (props.glow) {
-        VideoPlayer.play();
         VideoPlayerGlow.play();
       }
       Placeholder.style.transform = "translateX(100%)";
@@ -55,8 +55,8 @@ export default function VideoBanner(props: VideoBannerProps) {
             video_player.current as unknown as HTMLVideoElement;
           const Placeholder =
             placeholder.current as unknown as HTMLImageElement;
+          VideoPlayer.play();
           if (props.glow) {
-            VideoPlayer.play();
             VideoPlayerGlow.play();
           }
           Placeholder.style.transform = "translateX(100%)";
