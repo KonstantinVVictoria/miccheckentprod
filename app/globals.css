@@ -1,14 +1,25 @@
 :root {
-  --main-background-color-dark: rgb(27, 27, 27);
-  --main-font-color: rgb(245, 245, 245);
-  --rose-gold: #ff8395;
+  --obsidian: #121212;
+  --marble: #ebebeb;
+  --ruby: #ff2042;
   --gold: #ffe366;
+  --concrete: #797979;
+  --main-background-color-dark: var(--obsidian);
+  --main-background-color-white: var(--marble);
+  --main-font-color-black: var(--obsidian);
+  --main-font-color-white: var(--marble);
+
+  --trim-color: var(--ruby);
+  --border-color: var(--concrete);
+
+  --main-font-color: var(--main-font-color-black);
+  --main-background-color: var(var(--main-background-color-white));
 }
 
 html {
   max-width: 100vw;
   width: 100vw;
-  background-color: var(--main-background-color-dark);
+  background-color: var(--main-background-color);
   color: var(--main-font-color);
 }
 body {

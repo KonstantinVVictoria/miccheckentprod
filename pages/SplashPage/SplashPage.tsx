@@ -35,23 +35,22 @@ export default function SplashPage() {
           width: "100%",
           background: `linear-gradient(
     180deg,
-    rgba(25, 25, 25, 0.75) 0%,
-    rgba(35, 35, 35, 0.75) 100%
-  );`,
+    var(--main-background-color) 0%,
+    color-mix(in srgb, var(--main-background-color) 70%, rgb(0,0,0) 30%) 100%)`,
         }}
       >
         <input
           placeholder="Search"
           style={{
             height: " 2rem",
-            border: "1px solid white",
+            border: "1px solid var(--obsidian)",
             borderRadius: "50px",
             width: "80%",
             background: "transparent",
             fontFamily: "inherit",
             padding: "0rem 1rem",
             fontSize: "1rem",
-            color: "var(--gold)",
+            color: "var(--obsidian)",
           }}
         />
         <MenuIcon
@@ -61,7 +60,7 @@ export default function SplashPage() {
             zIndex: 100,
             position: "relative",
           }}
-          color={"var(--gold)"}
+          color={"var(--obsidian)"}
         />
       </footer>
     </>

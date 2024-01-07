@@ -8,12 +8,12 @@
   background: rgb(35, 35, 35);
   background: linear-gradient(
     0deg,
-    rgba(25, 25, 25, 0.75) 0%,
-    rgba(35, 35, 35, 0.75) 100%
+    var(--main-background-color) 0%,
+    color-mix(in srgb, var(--main-background-color) 70%, rgb(0, 0, 0) 30%) 100%
   );
   backdrop-filter: blur(10px);
   z-index: 100;
-  border-bottom: 1px solid var(--gold);
+  border-bottom: 1px solid var(--border-color);
   top: 0;
 }
 
@@ -38,11 +38,11 @@
   align-items: center;
   justify-content: center;
   composes: nav_link;
-  color: var(--gold);
+  color: white;
   border-radius: 5px;
-  border: 1px solid var(--gold);
+  border: none;
   padding: 0.6rem 0.6rem;
-  background-color: transparent;
+  background-color: var(--trim-color);
   font-family: inherit;
   font-weight: 400;
 }

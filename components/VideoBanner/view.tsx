@@ -36,6 +36,9 @@ export default function VideoBanner(props: VideoBannerProps) {
           onCanPlay={() => {
             const VideoPlayerGlow =
               video_player_glow.current as unknown as HTMLVideoElement;
+            const VideoPlayer =
+              video_player.current as unknown as HTMLVideoElement;
+            VideoPlayer.play();
             VideoPlayerGlow.play();
           }}
         />
