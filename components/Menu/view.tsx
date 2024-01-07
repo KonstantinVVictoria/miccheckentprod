@@ -74,7 +74,6 @@ export default function Menu() {
           backdropFilter: is_menu_open ? "blur(25px)" : "blur(0px)",
         }}
       >
-        <nav className={styles.menu_selections}></nav>
         <footer
           style={{
             zIndex: 103,
