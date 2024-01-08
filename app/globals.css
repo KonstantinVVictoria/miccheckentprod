@@ -17,6 +17,7 @@
   --main-font-color: var(--main-font-color-black);
   --main-background-color: var(--main-background-color-white);
   --bg-change: bg-change;
+  --rotate: rotate;
 }
 
 html {
@@ -53,5 +54,20 @@ body::-webkit-scrollbar-thumb {
   }
   50% {
     filter: hue-rotate(-45deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-10%);
+  }
+  75% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(10%);
   }
 }

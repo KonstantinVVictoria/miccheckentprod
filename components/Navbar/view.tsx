@@ -19,7 +19,7 @@ export function Navbar(props: NavbarProps) {
   //   <NavItem {...nav_link_prop} />
   // ));
   return (
-    <header className={styles.main_container}>
+    <header className={styles.main_container} id="nav_bar">
       <Logo size={4} style={{ margin: "0.5rem" }} />
       <div className={styles.menu_items}>
         <button className={styles.nav_link_special}>Book Now!</button>

@@ -5,6 +5,8 @@ import styles from "./styles.module.css";
 import { ExitIcon, MenuIcon } from "@/components/Icons/view";
 import { relative } from "path";
 import Menu from "@/components/Menu/view";
+import { useEffect } from "react";
+import SpecialImage from "@/components/SpecialImage/view";
 
 function InfoBanner() {
   return <></>;
@@ -66,8 +68,10 @@ export default function SplashPage() {
             color: "var(--obsidian)",
           }}
         >
-          <img
-            src="/images/dj_kev_fixing_lights.jpg"
+          <SpecialImage
+            parallax
+            src="/images/party.jpg"
+            alt="dj kev fixing lights"
             style={{ width: "100%", objectFit: "cover", borderRadius: "15px" }}
           />
           <h2
@@ -103,8 +107,10 @@ export default function SplashPage() {
             color: "var(--obsidian)",
           }}
         >
-          <img
+          <SpecialImage
+            parallax
             src="/images/dj_kev_closeup_side.jpg"
+            alt="dj kev close up"
             style={{ width: "100%", objectFit: "cover", borderRadius: "15px" }}
           />
           <h2

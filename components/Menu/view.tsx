@@ -53,6 +53,7 @@ export default function Menu() {
   return (
     <>
       <footer
+        id="mobile_footer"
         style={{
           zIndex: 100,
           position: "fixed",
@@ -68,7 +69,7 @@ export default function Menu() {
         }}
       >
         <input
-          placeholder="Ask an AI"
+          placeholder="Ask an AI 🤖"
           style={{
             height: " 2.5rem",
             border: "none",

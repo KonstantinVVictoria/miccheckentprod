@@ -8,6 +8,18 @@ export default function VideoBanner(props: VideoBannerProps) {
   const video_player = useRef(null);
   const placeholder = useRef(null);
   useEffect(() => {
+    // window.addEventListener(
+    //   "scroll",
+    //   () => {
+    //     document.body.style.setProperty(
+    //       "--scroll",
+    //       `${
+    //         window.scrollY / (document.body.offsetHeight - window.innerHeight)
+    //       }`
+    //     );
+    //   },
+    //   false
+    // );
     const VideoPlayer = video_player.current as unknown as HTMLVideoElement;
     const VideoPlayerGlow =
       video_player_glow.current as unknown as HTMLVideoElement;
