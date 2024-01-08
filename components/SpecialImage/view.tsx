@@ -24,7 +24,7 @@ export default function SpecialImage(props: SpecialImageProps) {
     const y_offset_top = NavBar.offsetHeight / viewport_height;
     const y_offset_bot = 1 - Footer.offsetHeight / viewport_height;
 
-    const shift_length = container_width - image_width;
+    const shift_length = (container_width - image_width) / 2;
     if (props.parallax) {
       window.addEventListener(
         "scroll",
@@ -36,8 +36,11 @@ export default function SpecialImage(props: SpecialImageProps) {
             relative_pos <= y_offset_bot - y_offset_top
           ) {
             //waxing
-            const transition_ratio =
-              relative_pos / (y_offset_bot - y_offset_top);
+            const transition_ratio = Math.pow(
+              relative_pos / (y_offset_bot - y_offset_top),
+              2.5
+            );
+
             Image.style.transform = `translateX(${
               (transition_ratio * shift_length) / 2
             }px)`;
