@@ -129,7 +129,12 @@ export default function Menu() {
           <MenuButton label="Jobs"></MenuButton>
           <img
             src="/images/company_logo.svg"
-            style={{ width: "100%", padding: "2rem" }}
+            style={{
+              width: "100%",
+              padding: "2rem",
+              border: "2px solid var(--obsidian)",
+              borderRadius: "15px",
+            }}
           />
         </menu>
       </div>
