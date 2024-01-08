@@ -108,11 +108,10 @@ export default function Menu() {
       >
         <menu
           style={{
-            position: "absolute",
-            bottom: "-calc(100vh - 4rem)",
+            position: "fixed",
+            bottom: "4rem",
             margin: "0",
             width: "100%",
-            height: "calc(100vh - 4rem)",
             padding: "1rem",
             zIndex: "104",
             display: "flex",
@@ -128,6 +127,10 @@ export default function Menu() {
           <MenuButton label="About Us"></MenuButton>
           <MenuButton label="Contact Us"></MenuButton>
           <MenuButton label="Jobs"></MenuButton>
+          <img
+            src="/images/company_logo.svg"
+            style={{ width: "100%", padding: "2rem" }}
+          />
         </menu>
       </div>
 
