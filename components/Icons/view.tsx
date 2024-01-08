@@ -120,7 +120,7 @@ export function AboutUsIcon(props: IconsProps) {
   );
 }
 
-function PhoneIcon(props: IconsProps) {
+export function PhoneIcon(props: IconsProps) {
   return (
     <svg
       width="800px"

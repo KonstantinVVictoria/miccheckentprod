@@ -6,6 +6,7 @@ import {
   HomeIcon,
   JobIcon,
   MenuIcon,
+  PhoneIcon,
 } from "../Icons/view";
 import styles from "./styles.module.css";
 import { MenuProps } from "./types";
@@ -108,7 +109,7 @@ export default function Menu() {
         <menu
           style={{
             position: "absolute",
-            top: "0",
+            bottom: "-calc(100vh - 4rem)",
             margin: "0",
             width: "100%",
             height: "calc(100vh - 4rem)",
@@ -117,8 +118,8 @@ export default function Menu() {
             display: "flex",
             flexWrap: "wrap",
             alignItems: "center",
-            justifyContent: "flex-end",
-            flexDirection: "column",
+            justifyContent: "flex-start",
+            flexDirection: "column-reverse",
             gap: "1rem",
           }}
         >
@@ -141,7 +142,7 @@ export default function Menu() {
             />
           </MenuButton>
           <MenuButton label="Contact Us">
-            <HomeIcon
+            <PhoneIcon
               style={{ height: "4rem", width: "auto" }}
               color={"var(--obsidian)"}
             />
