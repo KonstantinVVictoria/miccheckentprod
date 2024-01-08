@@ -14,7 +14,7 @@ import { useEffect, useState } from "react";
 type MenuButtonProps = {
   children: React.ReactNode;
   label: string;
-  special: boolean;
+  special?: boolean;
 };
 function MenuButton(props: MenuButtonProps) {
   return (
