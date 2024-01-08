@@ -132,7 +132,7 @@ export function PhoneIcon(props: IconsProps) {
       <defs>
         <style>{`.cls-1,.cls-2{fill:none;stroke:${
           props.color ? `${props.color}` : "#000"
-        };stroke-linecap:round;stroke-width:1.5px;}.cls-1{stroke-linejoin:round;}.cls-2{stroke-linejoin:bevel;}`}</style>
+        };stroke-linecap:round;stroke-width:1px;}.cls-1{stroke-linejoin:round;}.cls-2{stroke-linejoin:bevel;}`}</style>
       </defs>
 
       <g id="ic-contact-phone-2">
@@ -165,7 +165,7 @@ export function JobIcon(props: IconsProps) {
       <path
         d="M4 12H3V8C3 6.89543 3.89543 6 5 6H9M4 12V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V12M4 12H10M20 12H21V8C21 6.89543 20.1046 6 19 6H15M20 12H14M14 12V10H10V12M14 12V14H10V12M9 6V5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V6M9 6H15"
         stroke={props.color ? `${props.color}` : "#000"}
-        strokeWidth="2"
+        strokeWidth="1"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -186,7 +186,7 @@ export function CalendarIcon(props: IconsProps) {
       <path
         d="M4.5 10V7C4.5 6.44772 4.94772 6 5.5 6H7.3125M4.5 10V20C4.5 20.5523 4.94772 21 5.5 21H18.5C19.0523 21 19.5 20.5523 19.5 20V10M4.5 10H19.5M19.5 10V7C19.5 6.44772 19.0523 6 18.5 6H16.2188M7.3125 6V3M7.3125 6H16.2188M16.2188 6V3"
         stroke={props.color ? `${props.color}` : "#000"}
-        strokeWidth="2"
+        strokeWidth="1"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -212,10 +212,44 @@ export function HomeIcon(props: IconsProps) {
       style={props.style}
     >
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M11.3103 1.77586C11.6966 1.40805 12.3034 1.40805 12.6897 1.77586L20.6897 9.39491L23.1897 11.7759C23.5896 12.1567 23.605 12.7897 23.2241 13.1897C22.8433 13.5896 22.2103 13.605 21.8103 13.2241L21 12.4524V20C21 21.1046 20.1046 22 19 22H14H10H5C3.89543 22 3 21.1046 3 20V12.4524L2.18966 13.2241C1.78972 13.605 1.15675 13.5896 0.775862 13.1897C0.394976 12.7897 0.410414 12.1567 0.810345 11.7759L3.31034 9.39491L11.3103 1.77586ZM5 10.5476V20H9V15C9 13.3431 10.3431 12 12 12C13.6569 12 15 13.3431 15 15V20H19V10.5476L12 3.88095L5 10.5476ZM13 20V15C13 14.4477 12.5523 14 12 14C11.4477 14 11 14.4477 11 15V20H13Z"
-        fill={props.color ? `${props.color}` : "#000"}
+        d="M22 22L2 22"
+        stroke={props.color ? `${props.color}` : "#000"}
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M2 11L10.1259 4.49931C11.2216 3.62279 12.7784 3.62279 13.8741 4.49931L22 11"
+        stroke={props.color ? `${props.color}` : "#000"}
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5"
+        stroke={props.color ? `${props.color}` : "#000"}
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M4 22V9.5"
+        stroke={props.color ? `${props.color}` : "#000"}
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M20 22V9.5"
+        stroke={props.color ? `${props.color}` : "#000"}
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393C9 14.8787 9 15.5858 9 17V22"
+        stroke={props.color ? `${props.color}` : "#000"}
+        stroke-width="1.5"
+      />
+      <path
+        d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z"
+        stroke={props.color ? `${props.color}` : "#000"}
+        stroke-width="1.5"
       />
     </svg>
   );

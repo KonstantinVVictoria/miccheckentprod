@@ -9,15 +9,5 @@
       transparent,
       var(--ruby)
     );
-  animation: bg-change 5s infinite;
-}
-
-@keyframes bg-change {
-  0%,
-  100% {
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    filter: hue-rotate(-45deg);
-  }
+  animation: var(--bg-change) 5s infinite;
 }

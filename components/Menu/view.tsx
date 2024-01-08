@@ -13,7 +13,7 @@ import { MenuProps } from "./types";
 import { useEffect, useState } from "react";
 
 type MenuButtonProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   label: string;
   special?: boolean;
 };
@@ -32,7 +32,7 @@ function MenuButton(props: MenuButtonProps) {
           margin: 0,
           textAlign: "center",
           fontFamily: "inherit",
-          fontSize: "1rem",
+          fontSize: "2rem",
           color: props.special ? "var(--ruby)" : "",
         }}
       >
@@ -103,7 +103,7 @@ export default function Menu() {
         style={{
           opacity: is_menu_open ? "1" : "0",
           pointerEvents: is_menu_open ? "auto" : "none",
-          backdropFilter: is_menu_open ? "blur(60px)" : "blur(0px)",
+          backdropFilter: is_menu_open ? "blur(40px)" : "blur(0px)",
         }}
       >
         <menu
@@ -120,39 +120,14 @@ export default function Menu() {
             alignItems: "center",
             justifyContent: "flex-start",
             flexDirection: "column-reverse",
-            gap: "1rem",
+            gap: "2rem",
           }}
         >
-          <MenuButton label="Home">
-            <HomeIcon
-              style={{ height: "4rem", width: "auto" }}
-              color={"var(--obsidian)"}
-            />
-          </MenuButton>
-          <MenuButton label="Book" special>
-            <CalendarIcon
-              style={{ height: "4rem", width: "auto" }}
-              color={"var(--ruby)"}
-            />
-          </MenuButton>
-          <MenuButton label="About Us">
-            <AboutUsIcon
-              style={{ height: "4rem", width: "auto" }}
-              color={"var(--obsidian)"}
-            />
-          </MenuButton>
-          <MenuButton label="Contact Us">
-            <PhoneIcon
-              style={{ height: "4rem", width: "auto" }}
-              color={"var(--obsidian)"}
-            />
-          </MenuButton>
-          <MenuButton label="Jobs">
-            <JobIcon
-              style={{ height: "4rem", width: "auto" }}
-              color={"var(--obsidian)"}
-            />
-          </MenuButton>
+          <MenuButton label="Home"></MenuButton>
+          <MenuButton label="Book" special></MenuButton>
+          <MenuButton label="About Us"></MenuButton>
+          <MenuButton label="Contact Us"></MenuButton>
+          <MenuButton label="Jobs"></MenuButton>
         </menu>
       </div>
 

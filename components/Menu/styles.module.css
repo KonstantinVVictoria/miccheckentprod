@@ -5,11 +5,21 @@
   height: 100%;
   width: 100%;
   max-height: 100vh;
-  background-color: color-mix(in srgb, var(--marble) 85%, transparent 15%);
+  background: radial-gradient(
+      circle farthest-side at top right,
+      color-mix(in srgb, var(--marble) 50%, transparent 50%),
+      color-mix(in srgb, var(--marble) 80%, var(--sapphire) 20%)
+    ),
+    radial-gradient(
+      ellipse farthest-corner at 0% 100%,
+      color-mix(in srgb, var(--marble) 50%, transparent 50%),
+      color-mix(in srgb, var(--marble) 80%, var(--ruby) 20%)
+    );
 
   flex-direction: column;
   opacity: 0;
   transition: opacity 400ms ease, backdrop-filter 400ms ease;
+  animation: var(--bg-change) 5s infinite;
   top: 0;
 }
 

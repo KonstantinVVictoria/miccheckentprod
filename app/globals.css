@@ -16,6 +16,7 @@
 
   --main-font-color: var(--main-font-color-black);
   --main-background-color: var(--main-background-color-white);
+  --bg-change: bg-change;
 }
 
 html {
@@ -43,4 +44,14 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
+}
+
+@keyframes bg-change {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(-45deg);
+  }
 }
