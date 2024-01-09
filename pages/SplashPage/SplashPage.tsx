@@ -1,12 +1,10 @@
-import nav_links_data from "@/components/Navbar/config";
 import { Navbar } from "@/components/Navbar/view";
 import VideoBanner from "@/components/VideoBanner/view";
-import styles from "./styles.module.css";
-import { ExitIcon, MenuIcon } from "@/components/Icons/view";
-import { relative } from "path";
 import Menu from "@/components/Menu/view";
-import { useEffect } from "react";
 import SpecialImage from "@/components/SpecialImage/view";
+import styles from "./styles.module.css";
+import Viewport from "@/components/Viewport/view";
+import Banner from "@/components/Banner/view";
 
 function InfoBanner() {
   return <></>;
@@ -16,7 +14,7 @@ export default function SplashPage() {
   return (
     <>
       <Navbar />
-      <main style={{ marginBottom: "4.5rem" }}>
+      <Viewport>
         <VideoBanner
           style={{
             height: "65vh",
@@ -28,17 +26,12 @@ export default function SplashPage() {
           placeholder_src="images/company_logo.svg"
           placeholder_alt="dj kev"
         />
-        <section
-          className={styles.section}
+        <Banner
+          special
           style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
             margin: "0rem 0rem",
             padding: "1rem",
-            boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
-            color: "white",
+            color: "var(--marble)",
             height: "calc(100vh - 65vh - 8rem)",
           }}
         >
@@ -55,16 +48,11 @@ export default function SplashPage() {
               It’s about the <b>experience.</b>
             </q>
           </p>
-        </section>
-        <section
+        </Banner>
+        <Banner
           style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
             margin: "1rem 0rem",
             padding: "1rem",
-            boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
             color: "var(--obsidian)",
           }}
         >
@@ -94,13 +82,9 @@ export default function SplashPage() {
             We offer a full Wedding and Event entertainment service including
             Lighting and Photo Booth options.
           </p>
-        </section>
-        <section
+        </Banner>
+        <Banner
           style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
             margin: "1rem 0rem",
             padding: "1rem",
             boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
@@ -134,8 +118,8 @@ export default function SplashPage() {
             engineers where customer satisfaction and attention to detail is our
             highest priority.
           </p>
-        </section>
-      </main>
+        </Banner>
+      </Viewport>
       <Menu />
     </>
   );

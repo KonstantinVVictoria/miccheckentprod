@@ -1,0 +1,22 @@
+.main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+
+.special {
+  background-image: radial-gradient(
+      circle farthest-side at top right,
+      transparent,
+      var(--sapphire)
+    ),
+    radial-gradient(
+      ellipse farthest-corner at 0% 100%,
+      transparent,
+      var(--ruby)
+    );
+  animation: var(--bg-change) 5s infinite;
+}

@@ -47,7 +47,7 @@
   width: 2.5rem;
   border: none;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px) {
   .nav_link_special {
     font-size: 1.1rem;
   }

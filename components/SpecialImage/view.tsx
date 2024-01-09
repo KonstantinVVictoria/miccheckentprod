@@ -25,6 +25,7 @@ export default function SpecialImage(props: SpecialImageProps) {
     const y_offset_bot = 1 - Footer.offsetHeight / viewport_height;
 
     const shift_length = (container_width - image_width) / 2;
+    const ease_constant = 0.7;
     if (props.parallax) {
       window.addEventListener(
         "scroll",
@@ -36,22 +37,26 @@ export default function SpecialImage(props: SpecialImageProps) {
             relative_pos <= y_offset_bot - y_offset_top
           ) {
             //waxing
+
             const transition_ratio = Math.pow(
               relative_pos / (y_offset_bot - y_offset_top),
-              2.5
+              ease_constant
             );
-
             Image.style.transform = `translateX(${
-              (transition_ratio * shift_length) / 2
+              transition_ratio * shift_length
             }px)`;
           } else if (
             relative_pos < 0 &&
             relative_pos >= -image_height / viewport_height
           ) {
             //waning
-            // const transition_ratio =
-            //   -relative_pos / (image_height / viewport_height);
-            // Image.style.filter = `blur(${25 * transition_ratio}px)`;
+            const transition_ratio = -Math.pow(
+              -relative_pos / (image_height / viewport_height),
+              1.3
+            );
+            Image.style.transform = `translateX(${
+              transition_ratio * shift_length
+            }px)`;
           }
         },
         false
