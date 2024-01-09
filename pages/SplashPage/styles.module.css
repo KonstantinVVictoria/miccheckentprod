@@ -21,7 +21,8 @@
 }
 .main_article {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-  border-left: 1px solid var(--concrete);
+
+  z-index: 2;
 }
 .intro_video_mobile {
   display: none;
