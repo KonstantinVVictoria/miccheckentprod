@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 import { SpecialImageProps } from "./types";
 
+//TODO: Handle desktop version
 export default function SpecialImage(props: SpecialImageProps) {
   const ImageRef = useRef(null);
   const ContainerRef = useRef(null);

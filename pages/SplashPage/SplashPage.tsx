@@ -17,6 +17,20 @@ export default function SplashPage() {
   const [dimension_type, set_dimension_type] = useState(1);
 
   useEffect(() => {
+    if (
+      window.matchMedia("(max-width: 400px)").matches &&
+      dimension_type !== 3
+    ) {
+      set_dimension_type(3);
+    } else if (
+      window.matchMedia("(max-width: 760px)").matches &&
+      dimension_type !== 2
+    ) {
+      set_dimension_type(2);
+    } else {
+      set_dimension_type(1);
+    }
+
     window.addEventListener("resize", () => {
       if (
         window.matchMedia("(max-width: 400px)").matches &&
@@ -39,7 +53,7 @@ export default function SplashPage() {
   return (
     <div className={styles.page}>
       <aside className={styles.media}>
-        {dimension_type === 1 ? (
+        <div className={styles.intro_video}>
           <VideoBanner
             style={{
               height: "100vh",
@@ -51,7 +65,7 @@ export default function SplashPage() {
             placeholder_src="images/company_logo.svg"
             placeholder_alt="dj kev"
           />
-        ) : null}
+        </div>
       </aside>
       <article
         className={styles.main_article}
@@ -59,7 +73,7 @@ export default function SplashPage() {
       >
         <Navbar />
         <Viewport>
-          {dimension_type !== 1 ? (
+          <div className={styles.intro_video_mobile}>
             <VideoBanner
               style={{
                 height: "65vh",
@@ -71,7 +85,8 @@ export default function SplashPage() {
               placeholder_src="images/company_logo.svg"
               placeholder_alt="dj kev"
             />
-          ) : null}
+          </div>
+
           <Banner
             special
             style={{
