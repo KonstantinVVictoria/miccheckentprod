@@ -22,7 +22,30 @@
   animation: var(--bg-change) 5s infinite;
   top: 0;
 }
-
+.toolbar {
+  width: 50vw;
+  padding: 0.7rem 0.5rem;
+}
+.ask_ai {
+}
 .menu_selections {
   flex: 1;
+}
+.menu_button {
+  display: none;
+}
+@media only screen and (max-width: 760px) {
+  .menu_button {
+    display: block;
+  }
+  .ask_ai {
+    display: auto;
+  }
+  .toolbar {
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
 }

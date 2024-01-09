@@ -38,8 +38,6 @@ export default function VideoBanner(props: VideoBannerProps) {
           muted
           src={props.src}
           id={`${props.id}_glow`}
-          height="100%"
-          width="100%"
           ref={video_player_glow}
           style={{
             position: "absolute",

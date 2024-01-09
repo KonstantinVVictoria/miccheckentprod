@@ -42,7 +42,7 @@ function MenuButton(props: MenuButtonProps) {
   );
 }
 
-export default function Menu() {
+export default function Menu(props: MenuProps) {
   const [is_menu_open, menu_open] = useState(false);
   useEffect(() => {
     const body = document.getElementsByTagName(
@@ -53,6 +53,7 @@ export default function Menu() {
   return (
     <>
       <footer
+        className={styles.toolbar}
         id="mobile_footer"
         style={{
           zIndex: 100,
@@ -61,14 +62,13 @@ export default function Menu() {
           display: "flex",
           justifyContent: "space-evenly",
           alignItems: "center",
-          padding: "0.7rem 0.5rem",
           gap: "1rem",
-          width: "100%",
           backgroundColor: "var(--marble)",
           borderTop: "1px solid var(--concrete)",
         }}
       >
         <input
+          className={styles.ask_ai}
           placeholder="Ask an AI 🤖"
           style={{
             height: " 2.5rem",
@@ -82,102 +82,110 @@ export default function Menu() {
             color: "var(--obsidian)",
           }}
         />
-        <button
-          style={{ border: "none", backgroundColor: "transparent" }}
-          onMouseDown={() => {
-            menu_open(true);
-          }}
-        >
-          <MenuIcon
-            style={{
-              height: "2rem",
-              width: "auto",
-              zIndex: 100,
-              position: "relative",
+        {props.dimension_type !== 1 ? (
+          <button
+            className={styles.menu_button}
+            style={{ border: "none", backgroundColor: "transparent" }}
+            onMouseDown={() => {
+              menu_open(true);
             }}
-            color={"var(--obsidian)"}
-          />
-        </button>
+          >
+            <MenuIcon
+              style={{
+                height: "2rem",
+                width: "auto",
+                zIndex: 100,
+                position: "relative",
+              }}
+              color={"var(--obsidian)"}
+            />
+          </button>
+        ) : null}
       </footer>
-      <div
-        className={styles.menu}
-        style={{
-          opacity: is_menu_open ? "1" : "0",
-          pointerEvents: is_menu_open ? "auto" : "none",
-          backdropFilter: is_menu_open ? "blur(40px)" : "blur(0px)",
-        }}
-      >
-        <menu
-          style={{
-            position: "fixed",
-            bottom: "4rem",
-            margin: "0",
-            width: "100%",
-            padding: "1rem",
-            zIndex: "104",
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "center",
-            justifyContent: "flex-start",
-            flexDirection: "column-reverse",
-            gap: "2rem",
-          }}
-        >
-          <MenuButton label="Home"></MenuButton>
-          <MenuButton label="Book" special></MenuButton>
-          <MenuButton label="About Us"></MenuButton>
-          <MenuButton label="Contact Us"></MenuButton>
-          <MenuButton label="Jobs"></MenuButton>
-          <img
-            src="/images/company_logo.svg"
-            style={{
-              width: "100%",
-              padding: "2rem",
-              border: "2px solid var(--obsidian)",
-              borderRadius: "15px",
-            }}
-          />
-        </menu>
-      </div>
 
-      <footer
-        style={{
-          zIndex: 103,
-          position: "fixed",
-          bottom: "0",
-          display: "flex",
-          justifyContent: "flex-end",
-          alignItems: "center",
-          padding: "0.7rem 0.5rem",
-          gap: "1rem",
-          width: "100%",
-          height: "4rem",
-          backgroundColor: "transparent",
-          opacity: is_menu_open ? "1" : "0",
-          transition: "opacity 200ms ease",
-          pointerEvents: is_menu_open ? "auto" : "none",
-        }}
-      >
-        <button
-          style={{
-            border: "none",
-            backgroundColor: "transparent",
-          }}
-          onMouseDown={() => {
-            menu_open(false);
-          }}
-        >
-          <ExitIcon
+      {props.dimension_type !== 1 ? (
+        <>
+          <div
+            className={styles.menu}
             style={{
-              height: "2.4rem",
-              width: "auto",
-              zIndex: 104,
-              position: "relative",
+              opacity: is_menu_open ? "1" : "0",
+              pointerEvents: is_menu_open ? "auto" : "none",
+              backdropFilter: is_menu_open ? "blur(40px)" : "blur(0px)",
             }}
-            color={"var(--obsidian)"}
-          />
-        </button>
-      </footer>
+          >
+            <menu
+              style={{
+                position: "fixed",
+                bottom: "4rem",
+                margin: "0",
+                width: "100%",
+                padding: "1rem",
+                zIndex: "104",
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "flex-start",
+                flexDirection: "column-reverse",
+                gap: "2rem",
+              }}
+            >
+              <MenuButton label="Home"></MenuButton>
+              <MenuButton label="Book" special></MenuButton>
+              <MenuButton label="About Us"></MenuButton>
+              <MenuButton label="Contact Us"></MenuButton>
+              <MenuButton label="Jobs"></MenuButton>
+              <img
+                src="/images/company_logo.svg"
+                style={{
+                  width: "100%",
+                  padding: "2rem",
+                  border: "2px solid var(--obsidian)",
+                  borderRadius: "15px",
+                }}
+              />
+            </menu>
+          </div>
+
+          <footer
+            style={{
+              zIndex: 103,
+              position: "fixed",
+              bottom: "0",
+              display: "flex",
+              justifyContent: "flex-end",
+              alignItems: "center",
+              padding: "0.7rem 0.5rem",
+              gap: "1rem",
+              width: "100%",
+              height: "4rem",
+              backgroundColor: "transparent",
+              opacity: is_menu_open ? "1" : "0",
+              transition: "opacity 200ms ease",
+              pointerEvents: is_menu_open ? "auto" : "none",
+            }}
+          >
+            <button
+              style={{
+                border: "none",
+                backgroundColor: "transparent",
+              }}
+              onMouseDown={() => {
+                menu_open(false);
+              }}
+            >
+              <ExitIcon
+                style={{
+                  height: "2.4rem",
+                  width: "auto",
+                  zIndex: 104,
+                  position: "relative",
+                }}
+                color={"var(--obsidian)"}
+              />
+            </button>
+          </footer>
+        </>
+      ) : null}
     </>
   );
 }

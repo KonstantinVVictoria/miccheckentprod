@@ -25,7 +25,6 @@ export default function SpecialImage(props: SpecialImageProps) {
     const y_offset_bot = 1 - Footer.offsetHeight / viewport_height;
 
     const shift_length = (container_width - image_width) / 2;
-    const ease_constant = 0.7;
     if (props.parallax) {
       window.addEventListener(
         "scroll",
@@ -40,7 +39,7 @@ export default function SpecialImage(props: SpecialImageProps) {
 
             const transition_ratio = Math.pow(
               relative_pos / (y_offset_bot - y_offset_top),
-              ease_constant
+              1
             );
             Image.style.transform = `translateX(${
               transition_ratio * shift_length
@@ -52,7 +51,7 @@ export default function SpecialImage(props: SpecialImageProps) {
             //waning
             const transition_ratio = -Math.pow(
               -relative_pos / (image_height / viewport_height),
-              1.3
+              1
             );
             Image.style.transform = `translateX(${
               transition_ratio * shift_length

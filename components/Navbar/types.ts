@@ -6,5 +6,5 @@ export type NavbarProps = {
 export type NavLinkProps = {
   href: string;
   label: string;
-  special: boolean;
+  special?: boolean;
 };

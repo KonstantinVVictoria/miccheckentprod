@@ -18,6 +18,9 @@
   --main-background-color: var(--main-background-color-white);
   --bg-change: bg-change;
   --rotate: rotate;
+
+  --tablet-dim: 760px;
+  --phone-dim: 300px;
 }
 
 html {
@@ -34,17 +37,25 @@ body {
   box-sizing: border-box;
 }
 
-body::-webkit-scrollbar {
-  width: 1em;
+*::-webkit-scrollbar {
+  width: 0.5rem;
+  border-radius: 100px;
 }
 
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+*::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: var(--concrete);
+}
+* {
+  text-decoration-color: color-mix(in srgb, var(--ruby) 40%, var(--marble) 60%);
+}
+mark {
+  background-color: #ffed9b;
 }
 
 @keyframes bg-change {

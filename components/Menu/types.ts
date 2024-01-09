@@ -1,3 +1,4 @@
 export type MenuProps = {
-    children?: React.ReactNode;
+  children?: React.ReactNode;
+  dimension_type: number;
 };
