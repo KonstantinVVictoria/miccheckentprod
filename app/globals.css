@@ -52,7 +52,7 @@ body {
   background-color: var(--concrete);
 }
 * {
-  text-decoration-color: color-mix(in srgb, var(--ruby) 40%, var(--marble) 60%);
+  text-decoration-color: color-mix(in srgb, orange 40%, var(--marble) 60%);
 }
 mark {
   background-color: #ffed9b;
