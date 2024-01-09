@@ -5,4 +5,6 @@ export type SpecialImageProps = {
   style?: {
     [key: string]: string;
   };
+  mobile?: boolean;
+  desktop?: boolean;
 };

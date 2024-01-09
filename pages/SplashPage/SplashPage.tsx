@@ -36,20 +36,18 @@ export default function SplashPage() {
         window.matchMedia("(max-width: 400px)").matches &&
         dimension_type !== 3
       ) {
-        console.log("mobile");
         set_dimension_type(3);
       } else if (
         window.matchMedia("(max-width: 760px)").matches &&
         dimension_type !== 2
       ) {
         set_dimension_type(2);
-        console.log("tablet");
       } else {
         set_dimension_type(1);
-        console.log("desktop");
       }
     });
   }, []);
+  console.log(dimension_type);
   return (
     <div className={styles.page}>
       <aside className={styles.media}>
@@ -68,6 +66,7 @@ export default function SplashPage() {
         </div>
       </aside>
       <article
+        id="main_article"
         className={styles.main_article}
         style={{ overflowY: "scroll", height: "100vh" }}
       >
@@ -118,6 +117,17 @@ export default function SplashPage() {
             }}
           >
             <SpecialImage
+              desktop
+              src="/images/party.jpg"
+              alt="dj kev fixing lights"
+              style={{
+                width: "100%",
+                objectFit: "cover",
+                borderRadius: "15px",
+              }}
+            />
+            <SpecialImage
+              mobile
               parallax
               src="/images/party.jpg"
               alt="dj kev fixing lights"
@@ -158,6 +168,17 @@ export default function SplashPage() {
             }}
           >
             <SpecialImage
+              desktop
+              src="/images/dj_kev_closeup_side.jpg"
+              alt="dj kev close up"
+              style={{
+                width: "100%",
+                objectFit: "cover",
+                borderRadius: "15px",
+              }}
+            />
+            <SpecialImage
+              mobile
               parallax
               src="/images/dj_kev_closeup_side.jpg"
               alt="dj kev close up"

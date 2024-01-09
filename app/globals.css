@@ -82,3 +82,9 @@ mark {
     transform: translateX(10%);
   }
 }
+
+@media only screen and (max-width: 760px) {
+}
+
+@media only screen and (max-width: 300px) {
+}

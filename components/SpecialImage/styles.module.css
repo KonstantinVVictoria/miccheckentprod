@@ -1,6 +1,41 @@
 .main_container {
+  position: relative;
   overflow: hidden;
   height: 50vh;
   display: flex;
   justify-content: center;
+}
+.overlay {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  align-items: center;
+  justify-content: center;
+  background-color: var(--marble);
+}
+.mobile {
+  display: none;
+}
+.desktop {
+  display: flex;
+}
+.desktop > img {
+  border-radius: 15px;
+}
+@media only screen and (max-width: 760px) {
+  .overlay {
+    display: flex;
+    z-index: 2;
+  }
+  .mobile {
+    display: flex;
+  }
+  .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 300px) {
 }

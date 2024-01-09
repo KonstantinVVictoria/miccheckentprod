@@ -9,11 +9,12 @@
   z-index: 100;
   border-bottom: 1px solid var(--border-color);
   top: 0;
-  padding: 0.6rem 0.6rem;
+  padding: 0.6rem 0.8rem;
   height: auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0rem;
 }
 .header_items {
   display: flex;

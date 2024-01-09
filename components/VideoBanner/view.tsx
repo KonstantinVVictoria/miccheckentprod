@@ -31,8 +31,9 @@ export default function VideoBanner(props: VideoBannerProps) {
           id={`${props.id}_glow`}
           ref={video_player_glow}
           style={{
+            ...props.style,
             position: "absolute",
-            filter: "blur(40px) saturate(150%)",
+            filter: "blur(40px) saturate(200%) brightness(150%)",
             objectFit: "cover",
             opacity: 0.8,
           }}
