@@ -10,4 +10,5 @@ export type VideoBannerProps = {
   height?: string;
   width?: string;
   id: string;
+  reference?: React.RefObject<any>;
 };

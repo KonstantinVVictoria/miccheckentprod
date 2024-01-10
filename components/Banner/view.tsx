@@ -10,7 +10,11 @@ export default function Banner(props: BannerProps) {
   });
 
   return (
-    <section className={composite_classname} style={props.style}>
+    <section
+      className={composite_classname}
+      style={props.style}
+      ref={props.reference}
+    >
       {props.children}
     </section>
   );

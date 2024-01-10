@@ -129,11 +129,11 @@ export default function Menu(props: MenuProps) {
                 gap: "2rem",
               }}
             >
-              <MenuButton label="Home"></MenuButton>
+              <MenuButton label="Contact Us"></MenuButton>
+              <MenuButton label="Join Us"></MenuButton>
               <MenuButton label="Book" special></MenuButton>
               <MenuButton label="About Us"></MenuButton>
-              <MenuButton label="Contact Us"></MenuButton>
-              <MenuButton label="Jobs"></MenuButton>
+              <MenuButton label="Home"></MenuButton>
               <img
                 src="/images/company_logo.svg"
                 style={{

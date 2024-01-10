@@ -11,7 +11,6 @@ export default function VideoBanner(props: VideoBannerProps) {
     const VideoPlayer = video_player.current as unknown as HTMLVideoElement;
     const VideoPlayerGlow =
       video_player_glow.current as unknown as HTMLVideoElement;
-    console.log(VideoPlayer.readyState);
     const Placeholder = placeholder.current as unknown as HTMLImageElement;
     if (VideoPlayer.readyState > 2) {
       VideoPlayer.play();
@@ -22,7 +21,12 @@ export default function VideoBanner(props: VideoBannerProps) {
     }
   }, []);
   return (
-    <div id={props.id} className={styles.main_container} style={props.style}>
+    <div
+      id={props.id}
+      className={styles.main_container}
+      style={props.style}
+      ref={props.reference}
+    >
       {props.glow ? (
         <video
           loop

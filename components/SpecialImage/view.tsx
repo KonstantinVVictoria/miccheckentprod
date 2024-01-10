@@ -34,7 +34,6 @@ export default function SpecialImage(props: SpecialImageProps) {
     const shift_length = (container_width - image_width) / 2;
     if (props.parallax) {
       Article.addEventListener("scroll", () => {
-        console.log("red");
         const relative_pos =
           Image.getBoundingClientRect().y / viewport_height - y_offset_top;
         if (relative_pos >= 0 && relative_pos <= y_offset_bot - y_offset_top) {

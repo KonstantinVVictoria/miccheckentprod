@@ -19,6 +19,9 @@
   position: relative;
   width: 50vw;
 }
+.card_input {
+  padding: 2rem;
+}
 .main_article {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 
@@ -27,12 +30,52 @@
 .intro_video_mobile {
   display: none;
 }
-.intro_video {
-  display: block;
-  z-index: 2;
+
+.form_input {
+  font-family: inherit;
+  width: 80%;
+  margin-bottom: 1.2rem;
+  color: var(--obsidian);
+  border-radius: 5px !important;
+  padding: 1rem;
+  border: none;
+}
+.form_label {
+  width: 80%;
+  margin: 0rem;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
 }
 
+.form_button {
+  border-radius: 5px;
+  border: 2px solid var(--marble) !important;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  background-color: transparent;
+  align-self: flex-end;
+  margin-right: 10%;
+  font-family: inherit;
+  color: var(--marble);
+  cursor: pointer;
+}
+.media_holder {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
 @media only screen and (max-width: 760px) {
+  .form_button {
+    margin: 0;
+  }
+  .form_input {
+    width: 100%;
+    font-family: inherit;
+  }
+  .form_label {
+    width: 100%;
+  }
   .page {
     flex-direction: column;
     width: 100%;
@@ -40,7 +83,8 @@
   .intro_video_mobile {
     display: block;
   }
-  .intro_video {
+
+  .media_holder {
     display: none;
   }
 }
