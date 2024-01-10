@@ -191,7 +191,7 @@ export default function SplashPage() {
             <VideoBanner
               style={{
                 height: "65vh",
-                width: "100vw",
+                width: "100%",
                 borderRadius: "17px",
               }}
               id={styles.intro_video_mobile}
@@ -247,7 +247,7 @@ export default function SplashPage() {
               src="/images/party.jpg"
               alt="dj kev fixing lights"
               style={{
-                width: "100vw",
+                width: "100%",
                 objectFit: "cover",
                 borderRadius: "15px",
               }}

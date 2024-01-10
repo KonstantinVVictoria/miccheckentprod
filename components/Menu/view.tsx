@@ -58,7 +58,6 @@ export default function Menu(props: MenuProps) {
         style={{
           zIndex: 100,
           position: "fixed",
-          bottom: "0",
           display: "flex",
           justifyContent: "space-evenly",
           alignItems: "center",

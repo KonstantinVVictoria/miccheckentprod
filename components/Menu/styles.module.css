@@ -25,6 +25,7 @@
 .toolbar {
   width: 50vw;
   padding: 0.7rem 0.5rem;
+  bottom: 1rem;
 }
 .ask_ai {
 }
@@ -44,6 +45,7 @@
   .toolbar {
     width: 100%;
     padding: 0.7rem 0.5rem;
+    bottom: 0;
   }
 }
 
