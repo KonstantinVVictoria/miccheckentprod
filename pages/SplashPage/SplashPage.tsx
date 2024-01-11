@@ -185,6 +185,7 @@ export default function SplashPage() {
         className={styles.main_article}
         style={{ overflowY: "scroll", height: "100vh" }}
       >
+        <div className={styles.main_article_overlay}></div>
         <Navbar />
         <Viewport>
           <div className={styles.intro_video_mobile}>
