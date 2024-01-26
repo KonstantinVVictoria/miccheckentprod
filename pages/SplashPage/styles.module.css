@@ -29,20 +29,6 @@
   z-index: 2;
   padding: 5%;
 }
-.main_article_overlay {
-  height: 100vh;
-  width: 60vw;
-  position: absolute;
-  z-index: 200;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    rgba(35, 35, 35, 0.12) 0%,
-    rgba(35, 35, 35, 0) 10%,
-    rgba(35, 35, 35, 0) 90%,
-    rgba(35, 35, 35, 0.12) 100%
-  );
-}
 .intro_video_mobile {
   display: none;
 }
@@ -82,9 +68,6 @@
   position: relative;
 }
 @media only screen and (max-width: 760px) {
-  .main_article_overlay {
-    width: 100vw;
-  }
   .form_button {
     margin: 0;
   }

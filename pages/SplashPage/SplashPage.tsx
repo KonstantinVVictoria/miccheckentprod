@@ -134,7 +134,7 @@ export default function SplashPage() {
   }, []);
   return (
     <div className={styles.page}>
-      {/* <aside className={styles.media}></aside> */}
+      <aside className={styles.media}>
       <article
         id="main_article"
         className={styles.main_article}
@@ -185,7 +185,12 @@ export default function SplashPage() {
             reference={SplashVideoRef}
           />
         </div>
-        <div className={styles.main_article_overlay}></div>
+
+      <article
+        id="main_article"
+        className={styles.main_article}
+        style={{ overflowY: "scroll", height: "100vh" }}
+      >
         <Navbar />
         <Viewport>
           <div className={styles.intro_video_mobile}>

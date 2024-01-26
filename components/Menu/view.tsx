@@ -138,6 +138,7 @@ export default function Menu(props: MenuProps) {
                 style={{
                   width: "100%",
                   padding: "2rem",
+                  border: "2px solid var(--obsidian)",
                   borderRadius: "15px",
                 }}
               />
