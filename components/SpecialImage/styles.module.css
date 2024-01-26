@@ -21,9 +21,6 @@
 .desktop {
   display: flex;
 }
-.desktop > img {
-  border-radius: 15px;
-}
 @media only screen and (max-width: 760px) {
   .overlay {
     display: flex;

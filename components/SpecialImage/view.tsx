@@ -80,7 +80,11 @@ export default function SpecialImage(props: SpecialImageProps) {
         src={props.src}
         alt={props.alt}
         ref={ImageRef}
-        style={{ height: "100%" }}
+        style={{
+          height: "100%",
+          width: props.span ? "100%" : "",
+          ...props?.img_style,
+        }}
       />
     </div>
   );

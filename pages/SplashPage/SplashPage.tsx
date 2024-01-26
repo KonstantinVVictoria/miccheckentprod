@@ -134,7 +134,12 @@ export default function SplashPage() {
   }, []);
   return (
     <div className={styles.page}>
-      <aside className={styles.media}>
+      {/* <aside className={styles.media}></aside> */}
+      <article
+        id="main_article"
+        className={styles.main_article}
+        style={{ overflowY: "scroll", height: "100vh" }}
+      >
         <div id="media_holder" className={styles.media_holder}>
           <img
             id="join_us_image"
@@ -168,9 +173,10 @@ export default function SplashPage() {
           />
           <VideoBanner
             style={{
-              height: "100vh",
-              width: "50vw",
+              height: "calc(100vh - 4rem)",
+              width: "40vw",
               borderRadius: "17px",
+              marginTop: "4rem",
             }}
             id={"intro_video"}
             src="/videos/kev_splash_page.mp4"
@@ -179,12 +185,6 @@ export default function SplashPage() {
             reference={SplashVideoRef}
           />
         </div>
-      </aside>
-      <article
-        id="main_article"
-        className={styles.main_article}
-        style={{ overflowY: "scroll", height: "100vh" }}
-      >
         <div className={styles.main_article_overlay}></div>
         <Navbar />
         <Viewport>
@@ -228,69 +228,76 @@ export default function SplashPage() {
           <Banner
             style={{
               margin: "1rem 0rem",
-              padding: "1rem",
-              color: "var(--obsidian)",
-            }}
-          >
-            <SpecialImage
-              desktop
-              src="/images/party.jpg"
-              alt="dj kev fixing lights"
-              style={{
-                width: "100%",
-                objectFit: "cover",
-                borderRadius: "15px",
-              }}
-            />
-            <SpecialImage
-              mobile
-              parallax
-              src="/images/party.jpg"
-              alt="dj kev fixing lights"
-              style={{
-                width: "100%",
-                objectFit: "cover",
-                borderRadius: "15px",
-              }}
-            />
-            <h2
-              style={{
-                fontWeight: "400",
-                fontSize: "2rem",
-                textAlign: "center",
-              }}
-            >
-              What We Do
-            </h2>
-            <p
-              style={{
-                fontWeight: "200",
-                fontSize: "1.7rem",
-                textAlign: "center",
-                margin: "0rem 0rem",
-              }}
-            >
-              We offer a full <mark>Wedding</mark> and{" "}
-              <mark>Event entertainment service</mark> including <u>Lighting</u>{" "}
-              and <u>Photo Booth options</u>.
-            </p>
-          </Banner>
-          <Banner
-            style={{
-              margin: "1rem 0rem",
-              padding: "1rem",
+              padding: "0% 0% 0% 0%",
               boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
               color: "var(--obsidian)",
             }}
           >
             <SpecialImage
               desktop
+              span
+              src="/images/party.jpg"
+              alt="dj kev fixing lights"
+              style={{
+                width: "100%",
+                borderRadius: "0px",
+              }}
+              img_style={{ objectFit: "cover" }}
+            />
+            <SpecialImage
+              mobile
+              parallax
+              src="/images/party.jpg"
+              alt="dj kev fixing lights"
+              style={{
+                width: "100%",
+                objectFit: "cover",
+                borderRadius: "px",
+              }}
+            />
+            <div style={{ padding: "5%" }}>
+              <h2
+                style={{
+                  fontWeight: "400",
+                  fontSize: "2rem",
+                  textAlign: "center",
+                }}
+              >
+                What We Do
+              </h2>
+              <p
+                style={{
+                  fontWeight: "200",
+                  fontSize: "1.7rem",
+                  textAlign: "center",
+                  margin: "0rem 0rem",
+                }}
+              >
+                We offer a full <mark>Wedding</mark> and{" "}
+                <mark>Event entertainment service</mark> including{" "}
+                <u>Lighting</u> and <u>Photo Booth options</u>.
+              </p>
+            </div>
+          </Banner>
+          <Banner
+            style={{
+              margin: "1rem 0rem",
+              padding: "0% 0% 0% 0%",
+              boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
+              color: "var(--obsidian)",
+            }}
+          >
+            <SpecialImage
+              span
+              desktop
               src="/images/dj_kev_closeup_side.jpg"
               alt="dj kev close up"
               style={{
                 width: "100%",
+                borderRadius: "0px",
+              }}
+              img_style={{
                 objectFit: "cover",
-                borderRadius: "15px",
               }}
             />
             <SpecialImage
@@ -301,35 +308,73 @@ export default function SplashPage() {
               style={{
                 width: "100%",
                 objectFit: "cover",
-                borderRadius: "15px",
+                borderRadius: "px",
               }}
             />
-            <h2
-              style={{
-                fontWeight: "400",
-                fontSize: "2rem",
-                textAlign: "center",
-              }}
-            >
-              Who We Are
-            </h2>
-            <p
-              style={{
-                fontWeight: "200",
-                fontSize: "1.7rem",
-                textAlign: "center",
-                margin: "0rem 0rem",
-              }}
-            >
-              <mark>An entertainment company</mark> run by professional
-              musicians and audio engineers where{" "}
-              <u>
-                customer satisfaction and attention to detail is our highest
-                priority
-              </u>
-              .
-            </p>
+            <div style={{ padding: "5%" }}>
+              <h2
+                style={{
+                  fontWeight: "400",
+                  fontSize: "2rem",
+                  textAlign: "center",
+                }}
+              >
+                Who We Are
+              </h2>
+              <p
+                style={{
+                  fontWeight: "200",
+                  fontSize: "1.7rem",
+                  textAlign: "center",
+                  margin: "0rem 0rem",
+                }}
+              >
+                <mark>An entertainment company</mark> run by professional
+                musicians and audio engineers where{" "}
+                <u>
+                  customer satisfaction and attention to detail is our highest
+                  priority
+                </u>
+                .
+              </p>
+            </div>
           </Banner>
+
+          <Banner
+            style={{
+              margin: "1rem 0rem",
+              padding: "2%",
+              boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
+              color: "var(--obsidian)",
+            }}
+          >
+            <Banner
+              special
+              style={{
+                padding: "1rem",
+                color: "var(--marble)",
+                height: "calc(100vh - 65vh - 8rem)",
+                width: "100%",
+              }}
+            >
+              <h2
+                style={{
+                  fontWeight: "400",
+                  fontSize: "2rem",
+                  textAlign: "center",
+                }}
+              >
+                Mixes
+              </h2>
+            </Banner>
+            <iframe
+              width="100%"
+              height="120"
+              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fkevluuinthestu%2F"
+              frameBorder="0"
+            ></iframe>
+          </Banner>
+
           <Banner
             style={{
               margin: "1rem 0rem",
@@ -366,79 +411,89 @@ export default function SplashPage() {
                 alignItems: "center",
               }}
             >
-              <p
-                className={styles.form_label}
-                style={{
-                  fontSize: "1rem",
-                }}
-              >
-                Name
-              </p>
-              <input
-                className={styles.form_input}
-                style={{
-                  height: "2rem",
-                  borderRadius: "2px",
-                  fontSize: "1rem",
-                  backgroundColor:
-                    "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
-                }}
-              />
-              <p
-                className={styles.form_label}
-                style={{
-                  fontSize: "1rem",
-                }}
-              >
-                Email Address
-              </p>
-              <input
-                className={styles.form_input}
-                style={{
-                  height: "2rem",
-                  borderRadius: "2px",
-                  fontSize: "1rem",
-                  backgroundColor:
-                    "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
-                }}
-              />
-              <p
-                className={styles.form_label}
-                style={{
-                  fontSize: "1rem",
-                }}
-              >
-                Phone Number
-              </p>
-              <input
-                className={styles.form_input}
-                style={{
-                  height: "2rem",
-                  borderRadius: "2px",
-                  fontSize: "1rem",
-                  backgroundColor:
-                    "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
-                }}
-              />
-              <p
-                className={styles.form_label}
-                style={{
-                  fontSize: "1rem",
-                }}
-              >
-                Request
-              </p>
-              <textarea
-                className={styles.form_input}
-                style={{
-                  height: "8rem",
-                  borderRadius: "2px",
-                  fontSize: "1rem",
-                  backgroundColor:
-                    "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
-                }}
-              />
-              <button className={styles.form_button}>Book</button>
+              <form action="/api/submit_booking" method="post">
+                <label
+                  className={styles.form_label}
+                  style={{
+                    fontSize: "1rem",
+                  }}
+                >
+                  Name
+                </label>
+                <input
+                  name="name"
+                  className={styles.form_input}
+                  style={{
+                    height: "2rem",
+                    borderRadius: "2px",
+                    fontSize: "1rem",
+                    backgroundColor:
+                      "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
+                  }}
+                />
+                <label
+                  className={styles.form_label}
+                  style={{
+                    fontSize: "1rem",
+                  }}
+                >
+                  Email Address
+                </label>
+                <input
+                  name="email"
+                  className={styles.form_input}
+                  style={{
+                    height: "2rem",
+                    borderRadius: "2px",
+                    fontSize: "1rem",
+                    backgroundColor:
+                      "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
+                  }}
+                />
+                <label
+                  className={styles.form_label}
+                  style={{
+                    fontSize: "1rem",
+                  }}
+                >
+                  Phone Number
+                </label>
+                <input
+                  name="phone_number"
+                  className={styles.form_input}
+                  style={{
+                    height: "2rem",
+                    borderRadius: "2px",
+                    fontSize: "1rem",
+                    backgroundColor:
+                      "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
+                  }}
+                />
+                <label
+                  className={styles.form_label}
+                  style={{
+                    fontSize: "1rem",
+                  }}
+                >
+                  Request
+                </label>
+                <textarea
+                  name="request"
+                  className={styles.form_input}
+                  style={{
+                    height: "8rem",
+                    borderRadius: "2px",
+                    fontSize: "1rem",
+                    backgroundColor:
+                      "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
+                  }}
+                />
+                <input
+                  type="submit"
+                  value="Book"
+                  className={styles.form_button}
+                />
+              </form>
             </section>
           </Banner>
           <Banner

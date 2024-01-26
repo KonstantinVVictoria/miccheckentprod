@@ -7,4 +7,8 @@ export type SpecialImageProps = {
   };
   mobile?: boolean;
   desktop?: boolean;
+  span?: boolean;
+  img_style?: {
+    [key: string]: string;
+  };
 };

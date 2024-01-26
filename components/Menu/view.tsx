@@ -146,7 +146,7 @@ export default function Menu(props: MenuProps) {
 
           <footer
             style={{
-              zIndex: 103,
+              zIndex: 204,
               position: "fixed",
               bottom: "0",
               display: "flex",
@@ -175,7 +175,7 @@ export default function Menu(props: MenuProps) {
                 style={{
                   height: "2.4rem",
                   width: "auto",
-                  zIndex: 104,
+                  zIndex: 205,
                   position: "relative",
                 }}
                 color={"var(--obsidian)"}
