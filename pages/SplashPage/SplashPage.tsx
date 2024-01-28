@@ -232,6 +232,7 @@ export default function SplashPage() {
             }}
           >
             <p
+              id="main_banner"
               style={{
                 fontWeight: "200",
                 fontSize: "1.7rem",
@@ -352,6 +353,39 @@ export default function SplashPage() {
           </Banner>
           <Banner
             style={{
+              boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
+              color: "var(--obsidian)",
+              padding: "0px",
+            }}
+          >
+            <Banner
+              special
+              style={{
+                color: "var(--marble)",
+                height: "calc(100vh - 65vh - 8rem)",
+                width: "100%",
+              }}
+            >
+              <h2
+                id="mixes_section"
+                style={{
+                  fontWeight: "400",
+                  fontSize: "2rem",
+                  textAlign: "center",
+                }}
+              >
+                Mixes
+              </h2>
+            </Banner>
+            <iframe
+              width="100%"
+              height="400"
+              src="https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=%2Fkevluuinthestu%2F"
+              frameBorder="0"
+            ></iframe>
+          </Banner>
+          <Banner
+            style={{
               margin: "1rem 0rem",
               padding: "1rem",
               color: "var(--marble)",
@@ -369,6 +403,7 @@ export default function SplashPage() {
             ) : (
               <>
                 <h2
+                  id="book_now_section"
                   style={{
                     fontWeight: "400",
                     fontSize: "2rem",
@@ -546,6 +581,7 @@ export default function SplashPage() {
             reference={JoinUsSectionRef}
           >
             <h2
+              id="join_us_section"
               style={{
                 fontWeight: "400",
                 fontSize: "2rem",
@@ -565,9 +601,11 @@ export default function SplashPage() {
                 flexDirection: "column",
                 width: "100%",
                 alignItems: "center",
+                justifyContent: "center", //TODO: remove once section is finished
               }}
             >
-              <p
+              <h2>Coming Soon!</h2>
+              {/* <p
                 className={styles.form_label}
                 style={{
                   fontSize: "1rem",
@@ -631,7 +669,7 @@ export default function SplashPage() {
                   fontSize: "1rem",
                 }}
               />
-              <button className={styles.form_button}>Join</button>
+              <button className={styles.form_button}>Join</button> */}
             </section>
           </Banner>
         </Viewport>

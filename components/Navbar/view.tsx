@@ -23,10 +23,10 @@ export function Navbar(props: NavbarProps) {
       <div className={styles.header_items}>
         <Logo size={4} style={{ margin: "0.5rem" }} />
         <nav className={styles.nav_links}>
-          <NavItem label="Home" href="" />
-          <NavItem label="Mixes" href="" />
-          <NavItem label="Bookings" href="" />
-          <NavItem label="Jobs" href="" />
+          <NavItem label="Home" href="#main_banner" />
+          <NavItem label="Mixes" href="#mixes_section" />
+          <NavItem label="Bookings" href="#book_now_section" />
+          <NavItem label="Jobs" href="#join_us_section" />
           <NavItem label="Contact" href="" />
         </nav>
       </div>
