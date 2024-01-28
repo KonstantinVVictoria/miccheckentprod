@@ -355,7 +355,7 @@ export default function SplashPage() {
               margin: "1rem 0rem",
               padding: "1rem",
               color: "var(--marble)",
-              backgroundColor: "var(--ruby)",
+              backgroundColor: "var(--obsidian)",
               height: "calc(100vh - 2 * 4.5rem) !important",
               display: "flex",
               flexDirection: "column",
@@ -456,8 +456,6 @@ export default function SplashPage() {
                       height: "2rem",
                       borderRadius: "2px",
                       fontSize: "1rem",
-                      backgroundColor:
-                        "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
                     }}
                   />
                   <p
@@ -475,8 +473,6 @@ export default function SplashPage() {
                       height: "2rem",
                       borderRadius: "2px",
                       fontSize: "1rem",
-                      backgroundColor:
-                        "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
                     }}
                   />
                   <p
@@ -494,8 +490,6 @@ export default function SplashPage() {
                       height: "2rem",
                       borderRadius: "2px",
                       fontSize: "1rem",
-                      backgroundColor:
-                        "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
                     }}
                   />
                   <p
@@ -513,8 +507,6 @@ export default function SplashPage() {
                       height: "8rem",
                       borderRadius: "2px",
                       fontSize: "1rem",
-                      backgroundColor:
-                        "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
                     }}
                   />
                   <div>
@@ -542,7 +534,7 @@ export default function SplashPage() {
               margin: "1rem 0rem",
               padding: "1rem",
               color: "var(--marble)",
-              backgroundColor: "var(--sapphire)",
+              backgroundColor: "var(--concrete)",
               height: "calc(100vh - 2 * 4.5rem) !important",
               display: "flex",
               flexDirection: "column",
@@ -585,8 +577,6 @@ export default function SplashPage() {
                 className={styles.form_input}
                 style={{
                   height: "2rem",
-                  backgroundColor:
-                    "color-mix(in srgb, var(--marble) 90%, var(--sapphire) 10%)",
                   borderRadius: "2px",
                   fontSize: "1rem",
                 }}
@@ -603,8 +593,6 @@ export default function SplashPage() {
                 className={styles.form_input}
                 style={{
                   height: "2rem",
-                  backgroundColor:
-                    "color-mix(in srgb, var(--marble) 90%, var(--sapphire) 10%)",
                   borderRadius: "2px",
                   fontSize: "1rem",
                 }}
@@ -621,8 +609,6 @@ export default function SplashPage() {
                 className={styles.form_input}
                 style={{
                   height: "2rem",
-                  backgroundColor:
-                    "color-mix(in srgb, var(--marble) 90%, var(--sapphire) 10%)",
                   borderRadius: "2px",
                   fontSize: "1rem",
                 }}
@@ -638,8 +624,6 @@ export default function SplashPage() {
               <textarea
                 className={styles.form_input}
                 style={{
-                  backgroundColor:
-                    "color-mix(in srgb, var(--marble) 90%, var(--sapphire) 10%)",
                   height: "8rem",
                   borderRadius: "2px",
                   fontSize: "1rem",
