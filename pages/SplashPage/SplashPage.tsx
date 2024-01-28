@@ -228,7 +228,7 @@ export default function SplashPage() {
               margin: "0rem 0rem",
               padding: "1rem",
               color: "var(--marble)",
-              height: "calc(100vh - 65vh - 8rem)",
+              height: "calc(100lvh - 65vh - 8rem)",
             }}
           >
             <p
@@ -362,7 +362,7 @@ export default function SplashPage() {
               special
               style={{
                 color: "var(--marble)",
-                height: "calc(100vh - 65vh - 8rem)",
+                height: "calc(100lvh - 65vh - 8rem)",
                 width: "100%",
               }}
             >
