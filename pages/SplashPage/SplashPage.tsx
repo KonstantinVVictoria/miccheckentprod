@@ -7,9 +7,28 @@ import styles from "./styles.module.css";
 import Viewport from "@/components/Viewport/view";
 import Banner from "@/components/Banner/view";
 import { RefObject, useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import ReactLoading from "react-loading";
 
-function InfoBanner() {
-  return <></>;
+function SuccessfullySubmitted() {
+  return (
+    <div
+      style={{
+        height: "calc(100vh - 2 * 4.5rem)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <h2>Thank you for choosing us!</h2>
+      <p>
+        Please check your email and confirm you've <br /> received a copy of
+        your request.
+      </p>
+      <p>You'll hear back from us shortly 😁</p>
+    </div>
+  );
 }
 
 function PhaseMediaEffect(
@@ -92,7 +111,7 @@ export default function SplashPage() {
   const JoinUsImageRef = useRef(null);
   const JoinUsSectionRef = useRef(null);
   const [dimension_type, set_dimension_type] = useState(1);
-
+  const [booking_submitted, set_booking_submitted] = useState(false);
   useEffect(() => {
     const DesktopMediaHolder = document.getElementById(
       "media_holder"
@@ -135,11 +154,6 @@ export default function SplashPage() {
   return (
     <div className={styles.page}>
       <aside className={styles.media}>
-      <article
-        id="main_article"
-        className={styles.main_article}
-        style={{ overflowY: "scroll", height: "100vh" }}
-      >
         <div id="media_holder" className={styles.media_holder}>
           <img
             id="join_us_image"
@@ -158,25 +172,25 @@ export default function SplashPage() {
           />
           <img
             id="book_now_image"
-            src="/images/happy_couple_peace.jpg"
+            src="/images/prices.jpg"
             alt="dj_board"
             style={{
               position: "absolute",
-              width: "auto",
+              width: "50vw",
               height: "100vh",
-              objectFit: "cover",
-              top: "0",
-              right: "-50%",
+              objectFit: "contain",
+              top: "2rem",
+              right: "0%",
               opacity: "0",
+              background: "black",
             }}
             ref={BookingImageRef}
           />
           <VideoBanner
             style={{
-              height: "calc(100vh - 4rem)",
-              width: "40vw",
+              height: "100vh",
+              width: "50vw",
               borderRadius: "17px",
-              marginTop: "4rem",
             }}
             id={"intro_video"}
             src="/videos/kev_splash_page.mp4"
@@ -185,12 +199,13 @@ export default function SplashPage() {
             reference={SplashVideoRef}
           />
         </div>
-
+      </aside>
       <article
         id="main_article"
         className={styles.main_article}
         style={{ overflowY: "scroll", height: "100vh" }}
       >
+        <div className={styles.main_article_overlay}></div>
         <Navbar />
         <Viewport>
           <div className={styles.intro_video_mobile}>
@@ -233,21 +248,19 @@ export default function SplashPage() {
           <Banner
             style={{
               margin: "1rem 0rem",
-              padding: "0% 0% 0% 0%",
-              boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
+              padding: "1rem",
               color: "var(--obsidian)",
             }}
           >
             <SpecialImage
               desktop
-              span
               src="/images/party.jpg"
               alt="dj kev fixing lights"
               style={{
                 width: "100%",
-                borderRadius: "0px",
+                objectFit: "cover",
+                borderRadius: "15px",
               }}
-              img_style={{ objectFit: "cover" }}
             />
             <SpecialImage
               mobile
@@ -257,129 +270,86 @@ export default function SplashPage() {
               style={{
                 width: "100%",
                 objectFit: "cover",
-                borderRadius: "px",
+                borderRadius: "15px",
               }}
             />
-            <div style={{ padding: "5%" }}>
-              <h2
-                style={{
-                  fontWeight: "400",
-                  fontSize: "2rem",
-                  textAlign: "center",
-                }}
-              >
-                What We Do
-              </h2>
-              <p
-                style={{
-                  fontWeight: "200",
-                  fontSize: "1.7rem",
-                  textAlign: "center",
-                  margin: "0rem 0rem",
-                }}
-              >
-                We offer a full <mark>Wedding</mark> and{" "}
-                <mark>Event entertainment service</mark> including{" "}
-                <u>Lighting</u> and <u>Photo Booth options</u>.
-              </p>
-            </div>
-          </Banner>
-          <Banner
-            style={{
-              margin: "1rem 0rem",
-              padding: "0% 0% 0% 0%",
-              boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
-              color: "var(--obsidian)",
-            }}
-          >
-            <SpecialImage
-              span
-              desktop
-              src="/images/dj_kev_closeup_side.jpg"
-              alt="dj kev close up"
+            <h2
               style={{
-                width: "100%",
-                borderRadius: "0px",
-              }}
-              img_style={{
-                objectFit: "cover",
-              }}
-            />
-            <SpecialImage
-              mobile
-              parallax
-              src="/images/dj_kev_closeup_side.jpg"
-              alt="dj kev close up"
-              style={{
-                width: "100%",
-                objectFit: "cover",
-                borderRadius: "px",
-              }}
-            />
-            <div style={{ padding: "5%" }}>
-              <h2
-                style={{
-                  fontWeight: "400",
-                  fontSize: "2rem",
-                  textAlign: "center",
-                }}
-              >
-                Who We Are
-              </h2>
-              <p
-                style={{
-                  fontWeight: "200",
-                  fontSize: "1.7rem",
-                  textAlign: "center",
-                  margin: "0rem 0rem",
-                }}
-              >
-                <mark>An entertainment company</mark> run by professional
-                musicians and audio engineers where{" "}
-                <u>
-                  customer satisfaction and attention to detail is our highest
-                  priority
-                </u>
-                .
-              </p>
-            </div>
-          </Banner>
-
-          <Banner
-            style={{
-              margin: "1rem 0rem",
-              padding: "2%",
-              boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
-              color: "var(--obsidian)",
-            }}
-          >
-            <Banner
-              special
-              style={{
-                padding: "1rem",
-                color: "var(--marble)",
-                height: "calc(100vh - 65vh - 8rem)",
-                width: "100%",
+                fontWeight: "400",
+                fontSize: "2rem",
+                textAlign: "center",
               }}
             >
-              <h2
-                style={{
-                  fontWeight: "400",
-                  fontSize: "2rem",
-                  textAlign: "center",
-                }}
-              >
-                Mixes
-              </h2>
-            </Banner>
-            <iframe
-              width="100%"
-              height="120"
-              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fkevluuinthestu%2F"
-              frameBorder="0"
-            ></iframe>
+              What We Do
+            </h2>
+            <p
+              style={{
+                fontWeight: "200",
+                fontSize: "1.7rem",
+                textAlign: "center",
+                margin: "0rem 0rem",
+              }}
+            >
+              We offer a full <mark>Wedding</mark> and{" "}
+              <mark>Event entertainment service</mark> including <u>Lighting</u>{" "}
+              and <u>Photo Booth options</u>.
+            </p>
           </Banner>
-
+          <Banner
+            style={{
+              margin: "1rem 0rem",
+              padding: "1rem",
+              boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
+              color: "var(--obsidian)",
+            }}
+          >
+            <SpecialImage
+              desktop
+              src="/images/dj_kev_closeup_side.jpg"
+              alt="dj kev close up"
+              style={{
+                width: "100%",
+                objectFit: "cover",
+                borderRadius: "15px",
+              }}
+            />
+            <SpecialImage
+              mobile
+              parallax
+              src="/images/dj_kev_closeup_side.jpg"
+              alt="dj kev close up"
+              style={{
+                width: "100%",
+                objectFit: "cover",
+                borderRadius: "15px",
+              }}
+            />
+            <h2
+              style={{
+                fontWeight: "400",
+                fontSize: "2rem",
+                textAlign: "center",
+              }}
+            >
+              Who We Are
+            </h2>
+            <p
+              style={{
+                fontWeight: "200",
+                fontSize: "1.7rem",
+                textAlign: "center",
+                margin: "0rem 0rem",
+              }}
+            >
+              <mark>An entertainment company</mark> run by professional
+              musicians and audio engineers where{" "}
+              <u>
+                customer satisfaction and attention to detail is our highest
+                priority
+              </u>
+              .
+            </p>
+          </Banner>
           <Banner
             style={{
               margin: "1rem 0rem",
@@ -394,112 +364,178 @@ export default function SplashPage() {
             }}
             reference={BookingSectionRef}
           >
-            <h2
-              style={{
-                fontWeight: "400",
-                fontSize: "2rem",
-                textAlign: "center",
-                flex: "1",
-                marginTop: "0.5rem",
-                marginBottom: "0rem",
-              }}
-            >
-              Book Now!
-            </h2>
-            <section
-              style={{
-                flex: "10",
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-                width: "100%",
-                alignItems: "center",
-              }}
-            >
-              <form action="/api/submit_booking" method="post">
-                <label
-                  className={styles.form_label}
+            {booking_submitted ? (
+              <SuccessfullySubmitted />
+            ) : (
+              <>
+                <h2
                   style={{
-                    fontSize: "1rem",
+                    fontWeight: "400",
+                    fontSize: "2rem",
+                    textAlign: "center",
+                    flex: "1",
+                    marginTop: "0.5rem",
+                    marginBottom: "0rem",
                   }}
                 >
-                  Name
-                </label>
-                <input
-                  name="name"
-                  className={styles.form_input}
-                  style={{
-                    height: "2rem",
-                    borderRadius: "2px",
-                    fontSize: "1rem",
-                    backgroundColor:
-                      "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
+                  Book Now!
+                </h2>
+                <form
+                  onSubmit={async (event) => {
+                    event.preventDefault();
+                    const form = event.target as HTMLFormElement;
+                    const data = new FormData(form);
+                    const form_submit = document.getElementById(
+                      "booking_form_submit"
+                    ) as unknown as HTMLButtonElement;
+                    const form_loading = document.getElementById(
+                      "booking_form_loading"
+                    ) as unknown as HTMLDivElement;
+
+                    form_submit.style.display = "none";
+                    form_loading.style.display = " block";
+                    let payload = Array.from(data.entries()).reduce(
+                      (acc: any, [k, v]) => {
+                        acc[k] = v;
+                        return acc;
+                      },
+                      {}
+                    );
+                    payload.date = new Date().toLocaleString("en-US", {
+                      timeZone: "PST",
+                    });
+
+                    const result = await fetch(
+                      "http://localhost:3000/api/book",
+                      {
+                        method: "POST", // *GET, POST, PUT, DELETE, etc.
+                        mode: "cors", // no-cors, *cors, same-origin
+                        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                        credentials: "same-origin", // include, *same-origin, omit
+                        headers: {
+                          "Content-Type": "application/json",
+                          // 'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        redirect: "follow", // manual, *follow, error
+                        referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                        body: JSON.stringify(payload), // body data type must match "Content-Type" header
+                      }
+                    );
+                    if (result.status === 200) {
+                      form_submit.style.display = "none";
+                      form_loading.style.display = " none";
+                      set_booking_submitted(true);
+                    } else {
+                      form_submit.style.display = "";
+                      form_loading.style.display = " none";
+                    }
+
+                    return false;
                   }}
-                />
-                <label
-                  className={styles.form_label}
                   style={{
-                    fontSize: "1rem",
+                    flex: "10",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                    alignItems: "center",
                   }}
                 >
-                  Email Address
-                </label>
-                <input
-                  name="email"
-                  className={styles.form_input}
-                  style={{
-                    height: "2rem",
-                    borderRadius: "2px",
-                    fontSize: "1rem",
-                    backgroundColor:
-                      "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
-                  }}
-                />
-                <label
-                  className={styles.form_label}
-                  style={{
-                    fontSize: "1rem",
-                  }}
-                >
-                  Phone Number
-                </label>
-                <input
-                  name="phone_number"
-                  className={styles.form_input}
-                  style={{
-                    height: "2rem",
-                    borderRadius: "2px",
-                    fontSize: "1rem",
-                    backgroundColor:
-                      "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
-                  }}
-                />
-                <label
-                  className={styles.form_label}
-                  style={{
-                    fontSize: "1rem",
-                  }}
-                >
-                  Request
-                </label>
-                <textarea
-                  name="request"
-                  className={styles.form_input}
-                  style={{
-                    height: "8rem",
-                    borderRadius: "2px",
-                    fontSize: "1rem",
-                    backgroundColor:
-                      "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
-                  }}
-                />
-                <input
-                  type="submit"
-                  value="Book"
-                  className={styles.form_button}
-                />
-              </form>
-            </section>
+                  <p
+                    className={styles.form_label}
+                    style={{
+                      fontSize: "1rem",
+                    }}
+                  >
+                    Name
+                  </p>
+                  <input
+                    name="name"
+                    className={styles.form_input}
+                    style={{
+                      height: "2rem",
+                      borderRadius: "2px",
+                      fontSize: "1rem",
+                      backgroundColor:
+                        "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
+                    }}
+                  />
+                  <p
+                    className={styles.form_label}
+                    style={{
+                      fontSize: "1rem",
+                    }}
+                  >
+                    Email Address
+                  </p>
+                  <input
+                    name="email"
+                    className={styles.form_input}
+                    style={{
+                      height: "2rem",
+                      borderRadius: "2px",
+                      fontSize: "1rem",
+                      backgroundColor:
+                        "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
+                    }}
+                  />
+                  <p
+                    className={styles.form_label}
+                    style={{
+                      fontSize: "1rem",
+                    }}
+                  >
+                    Phone Number
+                  </p>
+                  <input
+                    name="phone_number"
+                    className={styles.form_input}
+                    style={{
+                      height: "2rem",
+                      borderRadius: "2px",
+                      fontSize: "1rem",
+                      backgroundColor:
+                        "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
+                    }}
+                  />
+                  <p
+                    className={styles.form_label}
+                    style={{
+                      fontSize: "1rem",
+                    }}
+                  >
+                    Request
+                  </p>
+                  <textarea
+                    name="request"
+                    className={styles.form_input}
+                    style={{
+                      height: "8rem",
+                      borderRadius: "2px",
+                      fontSize: "1rem",
+                      backgroundColor:
+                        "color-mix(in srgb, var(--marble) 90%, var(--ruby) 10%)",
+                    }}
+                  />
+                  <div>
+                    <input
+                      id="booking_form_submit"
+                      type="submit"
+                      value="Book"
+                      className={styles.form_button}
+                    />
+                    <div id="booking_form_loading" style={{ display: "none" }}>
+                      <ReactLoading
+                        type={"spin"}
+                        color={"white"}
+                        height={"2rem"}
+                        width={"2rem"}
+                      />
+                    </div>
+                  </div>
+                </form>
+              </>
+            )}
           </Banner>
           <Banner
             style={{
