@@ -23,10 +23,10 @@ function SuccessfullySubmitted() {
     >
       <h2>Thank you for choosing us!</h2>
       <p>
-        Please check your email and confirm you've <br /> received a copy of
+        Please check your email and confirm you have <br /> received a copy of
         your request.
       </p>
-      <p>You'll hear back from us shortly 😁</p>
+      <p>You will hear back from us shortly 😁</p>
     </div>
   );
 }
